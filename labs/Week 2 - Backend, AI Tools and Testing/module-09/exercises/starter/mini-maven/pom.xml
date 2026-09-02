@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- TODO: fill coordinates -->
+  <groupId>_____</groupId>
+  <artifactId>_____</artifactId>
+  <version>_____</version>
+  <packaging>jar</packaging>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.release>21</maven.compiler.release>
+    <junit.version>5.11.4</junit.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>${junit.version}</version>
+      <!-- TODO: test scope -->
+      <scope>_____</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <finalName>build-demo</finalName>
+    <plugins>
+      <!-- TODO: compiler + surefire + jar with Main-Class com.northstar.crm.BuildDemo -->
+    </plugins>
+  </build>
+</project>

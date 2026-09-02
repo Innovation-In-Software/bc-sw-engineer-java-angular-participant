@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: northstar-crm
+  # TODO: set a default profile comment; do not hard-code prod secrets
+server:
+  port: 8080
+northstar:
+  integration:
+    # TODO: bind via NorthstarIntegrationProperties (base defaults only)
+    api-base-url: http://localhost:9090
+    connect-timeout-ms: 2000

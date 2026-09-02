@@ -1,0 +1,30 @@
+# TODO — fill image from Lab 41 (digest or version-SHA tag)
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crm-api
+  labels:
+    app: crm-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crm-api
+  template:
+    metadata:
+      labels:
+        app: crm-api
+    spec:
+      containers:
+        - name: crm-api
+          image: registry.example.com/training/crm-api:TODO_LAB41_TAG
+          ports:
+            - containerPort: 8080
+          # TODO: readinessProbe httpGet path /actuator/health/readiness port http
+          # TODO: livenessProbe httpGet path /actuator/health/liveness port http
+          # TODO: securityContext runAsUser 10001 (Lab 41 non-root)
+          envFrom:
+            - configMapRef:
+                name: crm-api-config
+            # - secretRef:
+            #     name: crm-api-secrets   # create via oc; do not commit filled Secret

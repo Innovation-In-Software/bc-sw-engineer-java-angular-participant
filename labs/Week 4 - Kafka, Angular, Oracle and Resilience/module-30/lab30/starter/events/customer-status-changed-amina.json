@@ -1,0 +1,10 @@
+{
+  "eventId": "TODO-replace-with-uuid",
+  "eventType": "CustomerStatusChanged",
+  "eventVersion": 1,
+  "occurredAt": "2026-07-13T06:10:00Z",
+  "customerId": "CUS-1001",
+  "correlationId": "lab-request-001",
+  "source": "customer-service",
+  "data": { "previousStatus": "PROSPECT", "status": "ACTIVE" }
+}

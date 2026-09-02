@@ -1,0 +1,59 @@
+# .github/workflows/ci.yml
+name: CRM CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    tags: ["v*"]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    # TODO(lab43): Add postgres:16 service + SPRING_DATASOURCE_* env for ITs (db crm_lab43)
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+      - name: Verify
+        # TODO(lab43): Prefer ./mvnw if Wrapper is committed
+        run: mvn -B clean verify
+      # TODO(lab43): Optional Angular job: detect frontend/package.json in a step (hashFiles is not valid on job-level if), then npm ci + npx ng build
+      # TODO(lab43): Optional security gate
+      # - name: Dependency-Check
+      #   run: mvn -B -Psecurity-scan dependency-check:check
+      - name: Upload test reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-reports
+          path: "**/target/surefire-reports/**"
+
+  package:
+    needs: verify
+    # TODO(lab43): Confirm package-once only on main or version tags
+    if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+      - name: Package once
+        run: |
+          mvn -B -DskipTests package
+          # TODO(lab43): sha256sum (Linux) / shasum -a 256 (macOS runner notes)
+          sha256sum target/*.jar > target/SHA256SUMS
+          echo "commit=${GITHUB_SHA}" >> target/SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: crm-jar
+          path: |
+            target/*.jar
+            target/SHA256SUMS
+      # TODO(lab43): Never echo secrets; deploy steps belong in Lab 44 CD

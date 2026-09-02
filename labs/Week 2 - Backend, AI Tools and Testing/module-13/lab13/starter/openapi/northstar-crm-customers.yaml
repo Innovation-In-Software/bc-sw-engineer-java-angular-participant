@@ -1,0 +1,179 @@
+openapi: 3.0.3
+info:
+  title: Northstar CRM Customers API
+  version: 1.0.0
+  description: TODO — Customer collection and item contract for Angular clients
+servers:
+  - url: http://localhost:8080
+    description: Local Spring Boot
+paths:
+  /api/v1/customers:
+    get:
+      summary: List customers
+      parameters:
+        - $ref: '#/components/parameters/CorrelationId'
+        - name: page
+          in: query
+          schema: { type: integer, default: 0 }
+        - name: size
+          in: query
+          schema: { type: integer, default: 20, maximum: 100 }
+        - name: status
+          in: query
+          schema: { type: string, enum: [ACTIVE, PROSPECT] }
+        - name: sort
+          in: query
+          schema: { type: string, example: fullName,asc }
+      responses:
+        '200':
+          description: Page of customers
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerPage'
+        '400':
+          $ref: '#/components/responses/Error'
+    post:
+      summary: Create customer
+      parameters:
+        - $ref: '#/components/parameters/CorrelationId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CustomerRequest'
+            examples:
+              ravi:
+                value:
+                  customerId: CUS-1002
+                  fullName: Ravi Singh
+                  email: ravi.singh@example.com
+                  status: PROSPECT
+      responses:
+        '201':
+          description: Created
+          headers:
+            Location:
+              schema: { type: string }
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'
+        '400':
+          $ref: '#/components/responses/Error'
+        '409':
+          $ref: '#/components/responses/Error'
+  /api/v1/customers/{customerId}:
+    get:
+      summary: Get customer by id
+      parameters:
+        - $ref: '#/components/parameters/CorrelationId'
+        - name: customerId
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: Customer
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'
+              examples:
+                amina:
+                  value:
+                    customerId: CUS-1001
+                    fullName: Amina Khan
+                    email: amina.khan@example.com
+                    status: ACTIVE
+        '404':
+          $ref: '#/components/responses/Error'
+    put:
+      summary: TODO — replace customer
+      parameters:
+        - $ref: '#/components/parameters/CorrelationId'
+        - name: customerId
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CustomerRequest'
+      responses:
+        '200':
+          description: Replaced
+        '404':
+          $ref: '#/components/responses/Error'
+    delete:
+      summary: TODO — delete customer
+      parameters:
+        - $ref: '#/components/parameters/CorrelationId'
+        - name: customerId
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '204':
+          description: Deleted
+        '404':
+          $ref: '#/components/responses/Error'
+components:
+  parameters:
+    CorrelationId:
+      name: X-Correlation-Id
+      in: header
+      schema: { type: string, default: lab-request-001 }
+  responses:
+    Error:
+      description: Error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            timestamp: "2026-08-23T21:00:00Z"
+            status: 404
+            error: Not Found
+            message: "Customer not found: CUS-9999"
+            path: /api/v1/customers/CUS-9999
+            correlationId: lab-request-001
+  schemas:
+    Customer:
+      type: object
+      required: [customerId, fullName, email, status]
+      properties:
+        customerId: { type: string, example: CUS-1001 }
+        fullName: { type: string, example: Amina Khan }
+        email: { type: string, example: amina.khan@example.com }
+        status: { type: string, enum: [ACTIVE, PROSPECT] }
+    CustomerRequest:
+      type: object
+      required: [customerId, fullName, email, status]
+      properties:
+        customerId: { type: string }
+        fullName: { type: string }
+        email: { type: string, format: email }
+        status: { type: string }
+    CustomerPage:
+      type: object
+      properties:
+        content:
+          type: array
+          items: { $ref: '#/components/schemas/Customer' }
+        page: { type: integer }
+        size: { type: integer }
+        totalElements: { type: integer }
+    ErrorResponse:
+      type: object
+      required: [status, message, correlationId]
+      properties:
+        timestamp: { type: string, format: date-time }
+        status: { type: integer }
+        error: { type: string }
+        message: { type: string }
+        path: { type: string }
+        correlationId: { type: string, example: lab-request-001 }

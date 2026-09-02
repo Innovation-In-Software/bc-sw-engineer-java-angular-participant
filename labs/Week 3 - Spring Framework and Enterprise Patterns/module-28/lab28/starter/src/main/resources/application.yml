@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: northstar-crm
+server:
+  port: 8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+northstar:
+  security:
+    jwt-secret: ${JWT_SECRET:lab-only-change-me}

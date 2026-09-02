@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  TODO(lab40): Merge this profile into your CRM pom.xml <profiles>.
+  TODO(lab40): Add property <dependency-check.version>10.0.4</dependency-check.version> (pin per course).
+  TODO(lab40): Do NOT lower failBuildOnCVSS silently to force green.
+-->
+<profile>
+  <id>security-scan</id>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.owasp</groupId>
+        <artifactId>dependency-check-maven</artifactId>
+        <version>${dependency-check.version}</version>
+        <configuration>
+          <formats>
+            <format>HTML</format>
+            <format>JSON</format>
+          </formats>
+          <!-- TODO(lab40): Confirm threshold with instructor (default 7) -->
+          <failBuildOnCVSS>7</failBuildOnCVSS>
+          <suppressionFile>dependency-check-suppressions.xml</suppressionFile>
+          <!-- TODO(lab40): Optional — nvdApiKey from env, never commit the key -->
+          <!-- TODO(lab40): If OSS Index returns Invalid credentials, set ossindexAnalyzerEnabled to false -->
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</profile>

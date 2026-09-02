@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Policy: every suppression needs CVE id, rationale, owner, and expiry date.
+  TODO(lab40): Add only narrow, time-bounded suppressions after triage.
+  Example shape (uncomment when justified):
+
+  <suppress until="2026-12-31">
+    <notes>[lab40] False positive — … Owner: student@example.test</notes>
+    <cve>CVE-2024-XXXX</cve>
+  </suppress>
+-->
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+  <!-- TODO(lab40): leave empty until a finding is triaged and justified -->
+</suppressions>

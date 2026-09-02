@@ -1,0 +1,9 @@
+server:
+  port: 8080
+logging:
+  level:
+    com.northstar.crm: DEBUG
+management:
+  endpoint:
+    health:
+      show-details: always

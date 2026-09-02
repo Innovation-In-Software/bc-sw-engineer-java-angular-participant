@@ -1,0 +1,12 @@
+# TODO(lab42): Align host names with the instructor Project. No passwords.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: crm-api-config
+  labels:
+    app: crm-api
+data:
+  SPRING_PROFILES_ACTIVE: "openshift"
+  SERVER_PORT: "8080"
+  MANAGEMENT_ENDPOINT_HEALTH_PROBES_ENABLED: "true"
+  # TODO(lab42): CRM_DB_HOST / PORT / NAME / USER for training Postgres

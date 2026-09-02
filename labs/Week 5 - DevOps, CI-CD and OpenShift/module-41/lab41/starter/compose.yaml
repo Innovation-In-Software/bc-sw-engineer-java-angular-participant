@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: crm-postgres
+    ports: ["5432:5432"]
+    environment:
+      POSTGRES_USER: crm
+      POSTGRES_PASSWORD: change-me
+      POSTGRES_DB: crm_lab41
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U crm -d crm_lab41"]
+      interval: 5s
+      timeout: 5s
+      retries: 10

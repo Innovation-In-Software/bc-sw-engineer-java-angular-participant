@@ -1,0 +1,3 @@
+-- TODO: replace DATE_TRUNC/TRUNC(created_at) filters with half-open tstz range
+-- TODO: keyset page: WHERE (created_at, customer_id) < ($ts, $id) ORDER BY ... LIMIT 50
+-- TODO: compare nested loop vs hash join hints/plans for customer→account

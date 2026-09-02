@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: northstar-crm
+server:
+  port: 8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: when_authorized
+info:
+  app:
+    name: northstar-crm
+    description: Lab 35 REST Customer API for Angular HttpClient
+logging:
+  level:
+    com.northstar.crm: INFO

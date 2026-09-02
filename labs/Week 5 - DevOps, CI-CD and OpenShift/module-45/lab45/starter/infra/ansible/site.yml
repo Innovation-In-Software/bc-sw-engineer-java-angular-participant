@@ -1,0 +1,27 @@
+---
+# Lab 45 — Ansible site sketch (idempotent config for CRM host)
+# TODO(lab45): Keep tasks idempotent; second run should report changed=0 where possible.
+
+- name: Northstar CRM host baseline
+  hosts: crm
+  become: true
+  gather_facts: true
+  vars:
+    crm_app_user: crm
+    # TODO(lab45): Never put DB passwords in playbooks — use vault / env
+  tasks:
+    - name: Ensure crm group exists
+      ansible.builtin.group:
+        name: "{{ crm_app_user }}"
+        state: present
+
+    - name: Ensure crm user exists
+      ansible.builtin.user:
+        name: "{{ crm_app_user }}"
+        group: "{{ crm_app_user }}"
+        state: present
+        create_home: true
+
+    - name: Placeholder — document package installs
+      ansible.builtin.debug:
+        msg: "TODO(lab45): Install JRE / agent packages per instructor baseline"

@@ -1,0 +1,13 @@
+logging:
+  level:
+    com.northstar.crm: INFO
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
+# Unrestricted Actuator is lab-only — do not expose broadly on public prod hosts.
+# Lab 26 deepens secrets/profiles; do not invent production passwords here.

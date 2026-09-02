@@ -1,0 +1,6 @@
+server.port: 8080
+spring.application.name: lab20-crm
+logging:
+  level:
+    root: INFO
+    com.northstar.crm: INFO

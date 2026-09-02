@@ -1,0 +1,10 @@
+{
+  "eventId": "TODO-replace-with-uuid",
+  "eventType": "CustomerCreated",
+  "eventVersion": 1,
+  "occurredAt": "2026-07-13T06:05:00Z",
+  "customerId": "CUS-1002",
+  "correlationId": "lab-request-001",
+  "source": "customer-service",
+  "data": { "fullName": "Ravi Singh", "status": "PROSPECT" }
+}

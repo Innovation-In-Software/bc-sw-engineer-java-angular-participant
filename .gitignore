@@ -1,0 +1,36 @@
+# Build / dependency artifacts
+**/node_modules/
+**/target/
+**/dist/
+**/.vite/
+*.class
+
+# Python
+__pycache__/
+*.pyc
+
+# Secrets — keep .env.example, never real env files
+.env
+.env.local
+*.pem
+*.ppk
+id_rsa
+id_ed25519
+
+# Local/temp
+~$*
+.DS_Store
+Thumbs.db
+
+# Local backup copies — do not publish
+slides-BACKUP-before-font-normalize/
+
+# PowerPoint sources stay local / instructor repo; participants get slides/pdf
+slides/*.pptx
+
+# Instructor-only — not published to the participant repo
+**/solution/
+**/PACING.md
+**/INSTRUCTOR-DEMO.md
+labs/_LAB-GUIDE-STYLE.md
+labs/**/Java_Software_Engineer_*

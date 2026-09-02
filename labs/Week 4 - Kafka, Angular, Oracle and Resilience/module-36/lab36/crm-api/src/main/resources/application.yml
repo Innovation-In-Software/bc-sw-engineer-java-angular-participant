@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: northstar-crm
+server:
+  port: 8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: when_authorized
+info:
+  app:
+    name: northstar-crm
+    description: Lab 36 REST Customer API (demo Bearer lab-demo-token)
+logging:
+  level:
+    com.northstar.crm: INFO

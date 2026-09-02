@@ -1,0 +1,2 @@
+-- TODO: EXPLAIN (ANALYZE, BUFFERS) email lookup for a known address
+-- TODO: EXPLAIN list ACTIVE customers ORDER BY created_at, customer_id LIMIT 50 OFFSET 0

@@ -1,0 +1,4 @@
+-- TODO: create application role CRM_APP with LOGIN and limited grants (no SUPERUSER)
+-- Example shape (adjust for your shared vs local policy):
+-- CREATE ROLE crm_app LOGIN PASSWORD 'use-env-not-git';
+-- GRANT CONNECT ON DATABASE crm TO crm_app;

@@ -1,0 +1,2 @@
+finding_id,source,component,cve_or_issue,cvss,classification,owner,due_date,notes
+lab40-001,dependency-check,TODO(lab40):group:artifact:version,CVE-TODO,0.0,needs_review,student,YYYY-MM-DD,TODO(lab40): transitive path / FP rationale

@@ -1,0 +1,2 @@
+# TODO: lab-only teaser — e.g. logging.level.root: WARN
+# Document that unrestricted Actuator is not for public prod hosts.

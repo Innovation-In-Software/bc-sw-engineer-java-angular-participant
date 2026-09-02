@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: lab46-crm
+  kafka:
+    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    consumer:
+      group-id: crm-customer-projection-v1
+      auto-offset-reset: earliest
+      # TODO(lab46): Align deserializers with your event package
+    listener:
+      # TODO(lab46): ack-mode / concurrency per instructor
+
+crm:
+  kafka:
+    customer-events-topic: crm.customer.events
+    # DLT naming convention used by DeadLetterPublishingRecoverer stub:
+    customer-events-dlt: crm.customer.events.DLT
+    # TODO(lab46): Document retry vs DLT policy in docs/kafka-dashboard.md

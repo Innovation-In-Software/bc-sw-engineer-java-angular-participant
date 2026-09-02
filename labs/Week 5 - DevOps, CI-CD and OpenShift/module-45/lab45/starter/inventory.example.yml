@@ -1,0 +1,10 @@
+# Example inventory — replace hosts; never commit production IPs with secrets.
+all:
+  children:
+    crm:
+      hosts:
+        crm-dev-01:
+          ansible_host: 127.0.0.1
+          # TODO(lab45): ansible_user, become method
+      vars:
+        environment: dev

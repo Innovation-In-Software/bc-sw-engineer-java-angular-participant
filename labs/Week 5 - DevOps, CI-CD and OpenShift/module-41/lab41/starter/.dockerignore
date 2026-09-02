@@ -1,0 +1,12 @@
+# TODO(lab41): Keep build context small and secret-free
+target/
+.git/
+.idea/
+.vscode/
+.env
+.env.*
+!.env.example
+*.log
+reports/
+**/node_modules/
+# TODO(lab41): Add any local notes/ or screenshot folders you keep nearby

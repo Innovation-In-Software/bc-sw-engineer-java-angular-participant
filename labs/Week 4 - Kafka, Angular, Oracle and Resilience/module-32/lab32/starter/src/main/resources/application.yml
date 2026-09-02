@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: lab32-crm
+
+account:
+  api:
+    base-url: ${ACCOUNT_API_BASE_URL:http://localhost:8089}
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      accountProfile:
+        slidingWindowSize: 6
+        minimumNumberOfCalls: 4
+        failureRateThreshold: 50
+        waitDurationInOpenState: 2s
+  retry:
+    instances:
+      accountProfile:
+        maxAttempts: 3
+        waitDuration: 200ms
+  timelimiter:
+    instances:
+      accountProfile:
+        timeoutDuration: 1.5s
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,circuitbreakers,circuitbreakerevents

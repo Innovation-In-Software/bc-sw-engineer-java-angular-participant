@@ -1,0 +1,9 @@
+<header>
+  <h1>Northstar CRM</h1>
+  @if (session.accessToken()) {
+    <button type="button" (click)="logout()">Log out</button>
+  }
+</header>
+<main>
+  <router-outlet />
+</main>

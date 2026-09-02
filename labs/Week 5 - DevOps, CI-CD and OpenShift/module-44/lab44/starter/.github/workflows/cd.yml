@@ -1,0 +1,38 @@
+# CD sketch — promote immutable CRM artifact (Lab 44)
+name: CRM CD
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Target environment"
+        required: true
+        type: choice
+        options: [test, staging, production]
+      artifact_digest:
+        description: "Image digest or JAR sha256 from Lab 43"
+        required: true
+
+# TODO(lab44): Prefer environment protection rules + required reviewers for production
+# TODO(lab44): Download CI artifact by digest — do not rebuild
+# TODO(lab44): Secrets only via GitHub Environments — never hardcode
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify manifest identity
+        run: |
+          echo "Promoting digest=${{ inputs.artifact_digest }} to ${{ inputs.environment }}"
+          # TODO(lab44): Compare against artifact-manifest.json
+      - name: Deploy (sketch)
+        run: |
+          echo "TODO(lab44): oc set image deployment/crm-api …@digest (OpenShift; not k3s/kubectl/Ingress)"
+          # Never echo secrets or kubeconfig contents
+          # Never mvn package here — promote Lab 43 identity only
+      - name: Smoke (non-prod)
+        if: inputs.environment != 'production'
+        run: |
+          echo "TODO(lab44): hit readiness + CUS-1001 smoke"

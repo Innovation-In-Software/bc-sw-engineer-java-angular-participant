@@ -1,0 +1,3 @@
+-- TODO: generate >= 50k customers with skewed status distribution
+-- Keep fixture public_id CUS-1001 / CUS-1002 intact if already seeded
+-- Prefer set-based INSERT...SELECT generate_series(...)

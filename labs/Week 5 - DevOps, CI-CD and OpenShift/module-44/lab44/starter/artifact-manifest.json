@@ -1,0 +1,15 @@
+{
+  "application": "crm-api",
+  "version": "TODO(lab44)-semver",
+  "gitCommit": "TODO(lab44)-GITHUB_SHA",
+  "jarSha256": "TODO(lab44)-from-SHA256SUMS",
+  "imageRepository": "registry.example.com/TODO(lab44)/crm-api",
+  "imageDigest": "sha256:TODO(lab44)",
+  "builtBy": "lab43-ci",
+  "environments": {
+    "test": { "promoted": false, "smoke": "TODO" },
+    "staging": { "promoted": false, "smoke": "TODO(lab44): CUS-1001 / lab-request-001" },
+    "production": { "promoted": false, "approval": "TODO(lab44)" }
+  },
+  "notes": "Never put passwords, tokens, or kubeconfig here."
+}

@@ -1,0 +1,4 @@
+# Copy to terraform.tfvars locally — never commit real secrets.
+environment = "dev"
+region      = "us-east-1"
+# db_password = "TODO(lab45)-set-locally-only"

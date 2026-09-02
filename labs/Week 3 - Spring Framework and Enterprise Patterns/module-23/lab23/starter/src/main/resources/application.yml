@@ -1,0 +1,14 @@
+spring:
+  application:
+    # TODO: set name to northstar-crm
+    name:
+server:
+  # TODO: set port to 8080
+  port:
+management:
+  endpoints:
+    web:
+      exposure:
+        # TODO: expose health,info
+        include:
+# TODO: add logging.level.com.northstar.crm: INFO

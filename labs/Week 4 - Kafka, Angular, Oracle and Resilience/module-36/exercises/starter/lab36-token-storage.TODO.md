@@ -1,0 +1,19 @@
+# Token Storage Options
+
+Module 36 Ex 2 — fill every TODO.
+
+## Step 1 — Prefer
+
+TODO
+
+## Step 2 — Avoid
+
+TODO
+
+## Step 3 — Demo
+
+TODO
+
+## Step 4 — Capture
+
+TODO

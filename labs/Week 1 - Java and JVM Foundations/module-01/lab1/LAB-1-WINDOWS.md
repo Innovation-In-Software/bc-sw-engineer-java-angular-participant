@@ -1,0 +1,83 @@
+# Lab 1: JVM and Compilation — Windows
+
+**OS:** Windows  
+**Primary IDE:** IntelliJ IDEA Community Edition  
+**Optional IDE:** VS Code  
+**Shell:** Windows PowerShell  
+**Stack hint:** JDK 21 · Maven not required for Lab 1 (Lab 0 installs Maven for later)  
+**Full lab steps:** [LAB-1-GUIDE.md](LAB-1-GUIDE.md)  
+**Pre-lab exercises:** [`../exercises/EXERCISES-INDEX.md`](../exercises/EXERCISES-INDEX.md)  
+**Other OS:** [macOS guide](LAB-1-MACOS.md) · [IDE conventions](../../_IDE-CONVENTIONS.md)
+
+
+## Prerequisites (Windows)
+
+- [Lab 0 (Windows)](../../module-00/lab0/LAB-0-WINDOWS.md) complete (JDK 21, Maven when needed, Git)
+- IntelliJ with **Project SDK 21** (open/run steps: [IDE conventions](../../_IDE-CONVENTIONS.md))
+
+## Paths (Windows)
+
+| Item | Windows |
+| ---- | ------- |
+| Workspace (open in IDE) | `%USERPROFILE%\java-bootcamp` |
+| This lab project | `%USERPROFILE%\java-bootcamp\examples\jvm-compilation-lab` |
+| Shell | Windows PowerShell inside IntelliJ |
+| Path style | Backslashes; quote paths with spaces |
+
+```powershell
+cd $env:USERPROFILE\java-bootcamp
+# Lab 0 layout: code under examples/; commit to your GitHub repo
+cd examples\jvm-compilation-lab
+```
+
+### Commands this lab typically uses
+
+```powershell
+cd $env:USERPROFILE\java-bootcamp\examples\jvm-compilation-lab
+javac HelloWorld.java
+java HelloWorld
+# Expected: Hello, JVM!
+javap -c HelloWorld
+
+javac Calculator.java
+java Calculator
+# Expected: Sum = 30
+javap -c Calculator   # look for iadd, invokestatic, iload, istore
+
+javac Employee.java
+java Employee
+# Expected: 101 - Aman
+java -verbose:class Employee 2>&1 | Select-String Employee
+
+javac Employee.java MemoryDemo.java
+java MemoryDemo
+# Expected: Created 100000 employees
+
+# Clean rebuild (GUIDE Step 11)
+Remove-Item *.class -Force
+javac HelloWorld.java Calculator.java Employee.java MemoryDemo.java
+java HelloWorld; java Calculator; java Employee; java MemoryDemo
+```
+
+**Verified:** IntelliJ Terminal (PowerShell) + Temurin JDK **21.0.11** on Lab 0 workspace `%USERPROFILE%\java-bootcamp` (2026-08-02 participant retest). Exercises 1–8 smoke green; Lab Steps 2–11: `Hello, JVM!` · `Sum = 30` · `101 - Aman` · `Created 100000 employees`; `javap -c HelloWorld` shows `getstatic`/`ldc`/`invokevirtual`; `-verbose:class Employee` loads app class from `examples\jvm-compilation-lab`; ergonomic flags showed `UseG1GC=true`.
+
+## Do the lab
+
+Complete every step in **[LAB-1-GUIDE.md](LAB-1-GUIDE.md)**. Wherever the GUIDE shows `~/java-bootcamp`, use `%USERPROFILE%\java-bootcamp`.  
+Open/run IntelliJ steps are the same every lab — see [IDE conventions](../../_IDE-CONVENTIONS.md).
+
+## Your GitHub repo
+
+Commit this lab's work to your private `java-bootcamp` GitHub repo. Do not take screenshots. Nothing is submitted or graded.
+
+
+## Pass criteria
+
+_Check **Pass** or **Fail** yourself. Do not write these marks anywhere — nothing is submitted or graded. Commit your work to your GitHub repo._
+
+| # | Confirm | Self-check |
+| - | ------- | ---------- |
+| 1 | Workspace `%USERPROFILE%\java-bootcamp` open in IntelliJ with SDK **21** | Pass / Fail |
+| 2 | Lab project under `examples/jvm-compilation-lab` as in [LAB-1-GUIDE.md](LAB-1-GUIDE.md) | Pass / Fail |
+| 3 | GUIDE deliverables / checkpoints complete | Pass / Fail |
+| 4 | Commands above succeed (or as the GUIDE specifies) | Pass / Fail |

@@ -1,0 +1,27 @@
+# CD sketch — fill TODOs then promote a digest (never rebuild)
+name: Capstone CD
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Target environment"
+        required: true
+        type: choice
+        options: [test, staging, production]
+      artifact_digest:
+        description: "Image digest from CI"
+        required: true
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    # TODO: environment: ${{ inputs.environment }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy pinned digest
+        run: |
+          set -euo pipefail
+          # TODO: echo oc project / oc set image by digest — never rebuild the JAR here
+          echo "TODO: oc set image deployment/crm-api …@${{ inputs.artifact_digest }}"
+      # TODO: non-prod smoke for CUS-1001 + lab-request-001

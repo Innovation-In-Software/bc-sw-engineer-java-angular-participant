@@ -1,0 +1,10 @@
+{
+  "eventId": "e4b5f53d-7f18-4cf4-81ce-7cab6ec98491",
+  "eventType": "CustomerCreated",
+  "eventVersion": 1,
+  "occurredAt": "2026-07-13T06:00:00Z",
+  "customerId": "CUS-1001",
+  "correlationId": "lab-request-001",
+  "source": "customer-service",
+  "data": { "fullName": "Amina Khan", "status": "ACTIVE" }
+}
