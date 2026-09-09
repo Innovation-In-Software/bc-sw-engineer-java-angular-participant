@@ -12,7 +12,7 @@
 
 - [Lab 0 (macOS)](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-MACOS.md) complete
 - IntelliJ **Project SDK 21**; Node LTS; Chrome/Chromium
-- Docker optional (Testcontainers PostgreSQL)
+- Docker optional (Testcontainers PostgreSQL) — install in [Lab 0 macOS Step 11](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-MACOS.md#step-11--install-docker-desktop) if you use it
 
 ## Paths (macOS)
 

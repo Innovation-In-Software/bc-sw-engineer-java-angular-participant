@@ -18,6 +18,7 @@
 | Temurin OpenJDK | **21** LTS |
 | Maven | **3.9.x** |
 | Git | **2.x** (often preinstalled / Xcode CLT) |
+| Docker Desktop | Engine on PATH (`docker version` shows **Server**) — Step 11; finish before Week 4 if you skip it in class |
 
 ---
 
@@ -170,6 +171,33 @@ git --version
 
 Do not take screenshots. Commit practice work to your GitHub repo only.
 
+### Step 11 — Install Docker Desktop
+
+**Not on the 45-minute timed path.** You need the engine for Week 4 `docker compose` labs and Week 5 image builds. Install it **now** if this Mac may lose admin rights.
+
+**Homebrew (recommended):**
+
+```bash
+brew install --cask docker
+open -a Docker
+```
+
+**Or download:** https://docs.docker.com/desktop/setup/install/mac-install/ — pick **Apple Silicon** or **Intel**, open the `.dmg`, drag Docker to Applications, then launch **Docker**.
+
+Complete the first-run permissions prompt. Wait until Docker Desktop says the engine is running.
+
+Then:
+
+```bash
+docker version
+```
+
+**Expected:** Both a **Client** and a **Server** section print.
+
+**If it fails:** reopen Terminal after install; start Docker from Applications and wait for the engine; you need admin for the first launch. Docker Engine without Desktop is acceptable if `docker version` shows Server. Do not install OpenShift Local / CRC as a substitute.
+
+Do **not** start Lab 1 until rows 1–8 below are Pass. Complete this step before Week 4.
+
 ---
 
 ## Pass criteria (macOS)
@@ -181,9 +209,12 @@ mvn -version
 git --version
 echo $JAVA_HOME
 cd ~/java-bootcamp && pwd && ls
+docker version
 ```
 
 _Mark each row **Pass** or **Fail** in your own notes._
+
+**Before Lab 1**
 
 | # | Confirm | Self-check |
 | - | ------- | ---------- |
@@ -196,6 +227,12 @@ _Mark each row **Pass** or **Fail** in your own notes._
 | 7 | HelloJava runs via IntelliJ green arrow | Pass / Fail |
 | 8 | (Optional) VS Code opens the same folder | Pass / Fail |
 
-**Do not start Lab 1 until every Pass criteria row is Pass — check yourself, do not write it down.**
+**Before Week 4** (not required to start Lab 1)
+
+| # | Confirm | Self-check |
+| - | ------- | ---------- |
+| 9 | Docker Desktop (or Engine): `docker version` shows **Server** | Pass / Fail |
+
+**Do not start Lab 1 until rows 1–8 are Pass — check yourself, do not write it down.** Finish row 9 before Week 4.
 
 When complete, continue to **Lab 1** in your course materials.

@@ -76,7 +76,7 @@ Keep this checklist visible while you work.
 
 **Commit to your GitHub repo:** the items in the table above (sources + evidence + short notes).
 
-**Do not commit:** `target/`, `node_modules/`, secrets, heap dumps, or a copied answer keys.
+**Do not commit:** `target/`, `node_modules/`, secrets, heap dumps, or a verbatim instructor `solution/`.
 
 ## Lab Overview
 
@@ -133,7 +133,7 @@ Prior labs: [39](../../../Week%204%20-%20Kafka,%20Angular,%20Oracle%20and%20Resi
 Confirm (Lab 0 tools assumed):
 
 * Java 21 + Maven Wrapper; `./mvnw -B clean verify` green
-* Docker Engine for multi-stage builds
+* Docker Engine for multi-stage builds — install in [Lab 0 Step 11](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-GUIDE.md) ([Windows](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-WINDOWS.md#step-11--install-docker-desktop) · [macOS](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-MACOS.md#step-11--install-docker-desktop))
 * Actuator health endpoints (add dependency if needed)
 * No production secrets in images or Git
 
@@ -142,6 +142,7 @@ Confirm (Lab 0 tools assumed):
 ```bash
 java -version
 mvn -version
+docker version
 ```
 
 ## Worked example (read before you code)
@@ -290,10 +291,10 @@ Record size, user `10001`, entrypoint, architecture in the runbook.
 
 ```bash
 SPRING_PROFILES_ACTIVE=docker
-CRM_DB_HOST=localhost
+CRM_DB_HOST=crm-postgres
 CRM_DB_PORT=5432
-CRM_DB_NAME=crm
-CRM_DB_USER=crm_app
+CRM_DB_NAME=crm_lab41
+CRM_DB_USER=crm
 CRM_DB_PASSWORD=
 # KAFKA_BOOTSTRAP=...
 ```
@@ -381,8 +382,8 @@ docker network connect <crm-net> crm-lab41   # if started separately
 docker run --rm --name crm-lab41 --network <crm-net> -p 8080:8080 \
   -e CRM_DB_HOST=crm-postgres \
   -e CRM_DB_PORT=5432 \
-  -e CRM_DB_NAME=crm \
-  -e CRM_DB_USER=crm_app \
+  -e CRM_DB_NAME=crm_lab41 \
+  -e CRM_DB_USER=crm \
   --env-file .env.local crm-api:lab41
 ```
 
@@ -477,9 +478,8 @@ docker run --rm --name crm-lab41 -p 8080:8080 \
   --memory=512m --env-file .env.local crm-api:lab41
 curl -fsS http://localhost:8080/actuator/health/readiness
 curl -fsS -H "X-Correlation-Id: lab-request-001" \
-  -H "Content-Type: application/json" \
-  -X POST http://localhost:8080/api/v1/interactions \
-  -d '{"customerId":"CUS-1001","interactionType":"NOTE","summary":"lab41 smoke"}'
+  -u admin:change-me \
+  http://localhost:8080/api/customers/CUS-1001
 docker logs crm-lab41 --tail 50
 docker stop --time 20 crm-lab41
 ```
@@ -573,7 +573,7 @@ git status --short
 
 Keep Dockerfile and runbook; delete plaintext env files from shared hosts.
 
-**Keep `lab41-crm`**—Lab 42 deploys this image with Deployment/Service/Route and probes.
+**Keep `lab41-crm`**—Lab 42 deploys this image on OpenShift with Deployment/Service/Route and probes.
 
 
 ## Reflection Questions

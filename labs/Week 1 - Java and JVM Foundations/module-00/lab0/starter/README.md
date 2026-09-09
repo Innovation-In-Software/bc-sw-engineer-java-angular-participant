@@ -3,7 +3,7 @@
 **Theme:** Laptop environment only (JDK, Maven, IntelliJ, `java-bootcamp`, smoke).  
 **No large code project** — this folder is a timed checklist pointer, not an app scaffold.
 
-Open your OS how-to and work through the **essential** subset below. Full install steps (optional VS Code, deep troubleshooting) stay in the OS guides.
+Open your OS how-to and work through the **essential** subset below. Full install steps (optional VS Code, **Docker Desktop Step 11**, deep troubleshooting) stay in the OS guides.
 
 | OS | Full how-to |
 | -- | ----------- |
@@ -42,6 +42,10 @@ Follow the matching steps in your OS how-to; skip optional VS Code unless you al
 - [ ] Workspace opened in IntelliJ with Project SDK **21**
 - [ ] **HelloJava** smoke: terminal **and** IntelliJ green arrow print `Hello Java Bootcamp!`
 - [ ] Git identity set (`user.name` / `user.email`) — personal GitHub repo comes in Lab 1 Step 0
+
+## Before Week 4 (not in the 45 minutes)
+
+- [ ] **Docker Desktop** (or Engine) — OS how-to **Step 11**. `docker version` must show a **Server** section. Do this in Lab 0 if the laptop may lose admin rights.
 
 ## Smoke test
 
@@ -85,5 +89,7 @@ Evidence under `~/java-bootcamp/notes/` (Windows: `%USERPROFILE%\java-bootcamp\n
 | Git identity set | Pass / Fail |
 
 **Do not start Lab 1** until every row is Pass — check yourself, do not write it down.
+
+Finish Docker Desktop **Step 11** in your OS how-to before Week 4 (`docker version` shows **Server**).
 
 Continue remaining OS-guide steps (optional VS Code, extra troubleshooting) on the **full path** if needed.

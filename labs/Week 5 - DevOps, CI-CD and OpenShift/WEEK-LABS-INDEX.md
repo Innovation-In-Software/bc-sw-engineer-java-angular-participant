@@ -8,7 +8,7 @@
 **Primary IDE:** IntelliJ IDEA Community Edition · **Optional IDE:** VS Code  
 **OS guides:** each lab has `LAB-N-WINDOWS.md` and `LAB-N-MACOS.md`.
 
-**Cluster for this course:** Instructor-hosted shared **OpenShift** (Projects + Routes). Use **`oc`** and the kubeconfig/`oc login` details the instructor provides. CI/CD is **GitHub Actions** (not Bitbucket). Database for fullstack labs is **PostgreSQL**. See [FINAL-SETUP-README.md](../FINAL-SETUP-README.md).
+**Cluster for this course:** Instructor-hosted shared **OpenShift** (Projects + Routes). Use **`oc`** and the kubeconfig/`oc login` details the instructor provides. CI/CD is **GitHub Actions**. Database for fullstack labs is **PostgreSQL**. See [FINAL-SETUP-README.md](../FINAL-SETUP-README.md).
 
 **In class (~45 min):** open each lab’s `starter/README.md` → copy templates → fill TODOs → smoke test. Full GUIDE steps = homework. See [`_STARTER-PATH.md`](../_STARTER-PATH.md).
 

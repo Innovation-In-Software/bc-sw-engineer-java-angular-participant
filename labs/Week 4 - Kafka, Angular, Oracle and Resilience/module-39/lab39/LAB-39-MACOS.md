@@ -10,7 +10,7 @@
 
 ## Prerequisites (macOS)
 
-- Labs 37–38 concepts; Docker; IntelliJ SDK **21**
+- Labs 37–38 concepts; **Docker Desktop** — [Lab 0 macOS Step 11](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-MACOS.md#step-11--install-docker-desktop); IntelliJ SDK **21**
 - Copy `.env.example` → `.env` (never commit `.env`)
 
 ## Paths (macOS)

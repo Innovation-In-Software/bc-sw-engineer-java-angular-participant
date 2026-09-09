@@ -18,6 +18,7 @@
 | Temurin OpenJDK | **21** LTS |
 | Maven | **3.9.x** |
 | Git | **2.x** |
+| Docker Desktop | Engine on PATH (`docker version` shows **Server**) — Step 11; finish before Week 4 if you skip it in class |
 
 **Verified reference layout:** Temurin 21 at `C:\Program Files\Eclipse Adoptium\jdk-21`; Maven at `C:\Program Files\Apache\maven\current`; workspace `%USERPROFILE%\java-bootcamp`.
 
@@ -173,6 +174,33 @@ git --version
 
 Do not take screenshots. Commit practice work to your GitHub repo.
 
+### Step 11 — Install Docker Desktop
+
+**Not on the 45-minute timed path.** You need the engine for Week 4 `docker compose` labs and Week 5 image builds. Install it **now** if this laptop may lose admin rights.
+
+1. Check WSL 2 (Docker Desktop’s default backend). In **Windows PowerShell as Administrator**:
+
+```powershell
+wsl --status
+```
+
+If WSL is not installed, run `wsl --install`, reboot when Windows asks, then continue.
+
+2. Download **Docker Desktop for Windows**: https://docs.docker.com/desktop/setup/install/windows-install/ — keep the **WSL 2** backend (installer default).
+3. Run the installer. Reboot if it asks.
+4. Start **Docker Desktop** and wait until the engine is running (whale icon steady / “Engine running”).
+5. Open a **new** PowerShell window:
+
+```powershell
+docker version
+```
+
+**Expected:** Both a **Client** and a **Server** section print. Client-only with `open //./pipe/docker_engine` means the engine is not up — start Docker Desktop and wait.
+
+**If it fails:** reopen the terminal after install; start Docker Desktop; if `com.docker.service` is Stopped, `net start com.docker.service` in an **elevated** PowerShell. You need local admin for the installer. Docker Engine without Desktop is acceptable if `docker version` shows Server. Do not install OpenShift Local / CRC as a substitute.
+
+Do **not** start Lab 1 until rows 1–8 below are Pass. Complete this step before Week 4.
+
 ---
 
 ## Pass criteria (Windows)
@@ -185,9 +213,12 @@ git --version
 echo $env:JAVA_HOME
 cd $env:USERPROFILE\java-bootcamp
 Get-Location
+docker version
 ```
 
 _Mark each row **Pass** or **Fail** in your own notes._
+
+**Before Lab 1**
 
 | # | Confirm | Self-check |
 | - | ------- | ---------- |
@@ -200,6 +231,12 @@ _Mark each row **Pass** or **Fail** in your own notes._
 | 7 | HelloJava runs via IntelliJ green arrow | Pass / Fail |
 | 8 | (Optional) VS Code opens the same folder | Pass / Fail |
 
-**Do not start Lab 1 until every Pass criteria row is Pass — check yourself, do not write it down.**
+**Before Week 4** (not required to start Lab 1)
+
+| # | Confirm | Self-check |
+| - | ------- | ---------- |
+| 9 | Docker Desktop (or Engine): `docker version` shows **Server** | Pass / Fail |
+
+**Do not start Lab 1 until rows 1–8 are Pass — check yourself, do not write it down.** Finish row 9 before Week 4.
 
 When complete, continue to **Lab 1** in your course materials.

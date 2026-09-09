@@ -18,7 +18,7 @@ Name IntelliJ IDEA Community as primary; VS Code optional.
 
 ### Step 3 — Later stack
 
-Note Docker/Node are used from Week 4+; OpenShift is instructor-hosted `oc`, not a local cluster install.
+Note Docker Desktop is **required** (Lab 0 OS how-to **Step 11**; finish before Week 4). Node is used from Week 4+; OpenShift is instructor-hosted `oc`, not a local cluster install.
 
 ### Step 4 — Capture
 
@@ -26,7 +26,7 @@ Save `notes/lab0-tool-inventory.md`.
 
 ## Expected result
 
-Inventory names JDK 21 + Maven + Git + IntelliJ and defers cluster install.
+Inventory names JDK 21 + Maven + Git + IntelliJ, and that Docker Desktop is Lab 0 Step 11 (before Week 4). Defers cluster install.
 
 ## Pass criteria
 

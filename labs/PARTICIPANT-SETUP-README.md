@@ -15,13 +15,13 @@ Install tools on **your laptop**. Shared Oracle, Kafka, and OpenShift are provid
 | GitHub account | source control, **GitHub Actions**, GHCR, Copilot |
 | Node.js | **22 LTS** (before Week 4 Angular labs) |
 | Angular CLI | `npm install -g @angular/cli` (before Modules 33–36) |
+| **Docker** (Desktop or Engine) | **Required.** Install in [Lab 0 Step 11](Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-GUIDE.md) ([Windows](Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-WINDOWS.md#step-11--install-docker-desktop) · [macOS](Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-MACOS.md#step-11--install-docker-desktop)). Finish before Week 4 if you skipped it in class. Needed for Labs 37–39 (`docker compose`) and Labs 41 / 51 (image builds). Install earlier if the laptop is locked down. |
 
 ## Before Week 5
 
 | Tool | Notes |
 | ---- | ----- |
 | **oc** (OpenShift CLI) | Deploy into the shared OpenShift project the instructor assigns |
-| Docker (optional) | Only for labs that build and push an image to GHCR |
 
 ## Instructor provides (not in Git)
 

@@ -14,6 +14,7 @@
 
 - [Lab 0 (Windows)](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-WINDOWS.md) complete (JDK 21, Maven when needed, Git)
 - IntelliJ with **Project SDK 21** (open/run steps: [IDE conventions](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/_IDE-CONVENTIONS.md))
+- **Docker Desktop** installed and engine running — [Lab 0 Windows Step 11](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-WINDOWS.md#step-11--install-docker-desktop). `docker version` must show **Server**.
 
 ## Paths (Windows)
 
@@ -57,6 +58,7 @@ Verified on this laptop (2026-08-11), Temurin 21.0.11, Maven 3.9.9, Docker Deskt
 
 | Symptom | Fix |
 | --- | --- |
+| `docker` not found / no Server in `docker version` | [Lab 0 Windows Step 11](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-WINDOWS.md#step-11--install-docker-desktop); start Docker Desktop and wait |
 | `bind: Only one usage of … port 8080` | Kill leftover Java on 8080; `docker rm -f crm-lab41` |
 | Readiness never UP | Join `lab41verify_default` and set `CRM_DB_HOST=crm-postgres` |
 | Health 401 | Permit `/actuator/health/**` in `SecurityConfig` |

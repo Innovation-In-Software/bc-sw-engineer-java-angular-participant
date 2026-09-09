@@ -12,7 +12,7 @@
 
 - [Lab 0 (Windows)](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-WINDOWS.md) complete
 - IntelliJ **Project SDK 21**; Node LTS; Chrome/Chromium
-- Docker Desktop optional (Testcontainers PostgreSQL)
+- Docker Desktop optional (Testcontainers PostgreSQL) — install in [Lab 0 Windows Step 11](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-WINDOWS.md#step-11--install-docker-desktop) if you use it
 
 ## Paths (Windows)
 

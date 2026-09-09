@@ -13,7 +13,7 @@
 
 | Do now | Do not add yet |
 | --- | --- |
-| Inventory JDK 21, Maven, Git, IntelliJ, optional Docker/Node | Do not start Lab 1 JVM exercises yet |
+| Inventory JDK 21, Maven, Git, IntelliJ; plan Docker Desktop (Lab 0 Step 11, before Week 4) and Node for Week 4 | Do not start Lab 1 JVM exercises yet |
 | Plan the `java-bootcamp` workspace folders | Do not install OpenShift/CRC/k3s on the laptop |
 | Record Git identity without pasting tokens | Do not treat Oracle as the taught database |
 | Plan IntelliJ SDK 21 + HelloJava smoke | Do not commit secrets or `.env` files |

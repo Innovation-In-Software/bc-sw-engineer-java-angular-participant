@@ -19,6 +19,7 @@ flowchart LR
     IDE["IntelliJ / VS Code"]
     JDK["JDK 21 + Maven + Git"]
     NG["Node 22 + Angular CLI"]
+    DK["Docker Desktop / Engine"]
     OC["oc CLI"]
   end
   subgraph Shared["Instructor-hosted shared env"]
@@ -31,5 +32,7 @@ flowchart LR
 ```
 
 Connection details (host, service name, username, password, `oc login`) are handed out by the instructor. **Never commit** passwords, kubeconfigs, or `.env` files.
+
+Install **Docker Desktop** on the laptop in [Lab 0 Step 11](Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-GUIDE.md) ([Windows](Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-WINDOWS.md#step-11--install-docker-desktop) · [macOS](Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-MACOS.md#step-11--install-docker-desktop)). It does not replace the shared OpenShift cluster.
 
 Reachability requires the class IP allowlist (or instructor VPN).

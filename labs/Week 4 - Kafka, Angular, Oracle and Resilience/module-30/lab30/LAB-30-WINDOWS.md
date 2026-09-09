@@ -14,6 +14,7 @@
 
 - [Lab 0 (Windows)](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-WINDOWS.md) complete (JDK 21, Maven when needed, Git)
 - IntelliJ with **Project SDK 21** (open/run steps: [IDE conventions](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/_IDE-CONVENTIONS.md))
+- Docker engine if this lab uses `docker compose` locally — [Lab 0 Windows Step 11](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-WINDOWS.md#step-11--install-docker-desktop)
 
 ## Paths (Windows)
 
@@ -37,7 +38,7 @@ cd $env:USERPROFILE\java-bootcamp\examples\lab30-crm
 docker compose
 ```
 
-**Docker engine (verified 2026-08-11):** Docker Desktop UI/processes can start without the engine. If `docker version` says `open //./pipe/docker_engine` and `com.docker.service` is **Stopped**, `net start com.docker.service` needs an **elevated** PowerShell (error 5 Access is denied from a non-elevated shell). Starting `wsl -d docker-desktop` alone does **not** create the named pipe. After the service is Running, retry `docker compose up -d` from `examples/lab30-crm`.
+**Docker engine (verified 2026-08-11):** If Docker Desktop is not installed yet, follow [Lab 0 Windows Step 11](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-WINDOWS.md#step-11--install-docker-desktop) first. Docker Desktop UI/processes can start without the engine. If `docker version` says `open //./pipe/docker_engine` and `com.docker.service` is **Stopped**, `net start com.docker.service` needs an **elevated** PowerShell (error 5 Access is denied from a non-elevated shell). Starting `wsl -d docker-desktop` alone does **not** create the named pipe. After the service is Running, retry `docker compose up -d` from `examples/lab30-crm`.
 
 **WSL drive missing (verified 2026-08-11):** Desktop dialog *“The Docker Desktop WSL data distro is registered with WSL, but its drive seems to be missing.”* Official recovery: `wsl --unregister docker-desktop-data`, then start Docker Desktop (recreates the data distro; **deletes existing containers/images/volumes**). After that, `wsl -l -v` showed both `docker-desktop` and `docker-desktop-data` **Running**, and `docker version` reported Engine **24.0.7**. Then `docker compose up -d` pulled `apache/kafka:3.9.1` and bound `0.0.0.0:9092->9092/tcp`.
 

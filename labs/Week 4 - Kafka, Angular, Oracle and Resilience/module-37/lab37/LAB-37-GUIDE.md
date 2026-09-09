@@ -1,6 +1,6 @@
 # Lab 37: PostgreSQL Database Fundamentals — Northstar CRM Schema
 
-> **Participants:** Module sequence is in [`../README.md`](../README.md). Open **one** OS how-to ([Windows](LAB-37-WINDOWS.md) · [macOS](LAB-37-MACOS.md)). In class, prefer the **45-minute timed path** with [`starter/`](starter/README.md); the **full path** is every Step below. This repo has no answer keys — complete the TODOs yourself. See [Which file do I open?](../../../_PARTICIPANT-FILE-GUIDE.md).
+> **Participants:** Module sequence is in [`../README.md`](../README.md). Open **one** OS how-to ([Windows](LAB-37-WINDOWS.md) · [macOS](LAB-37-MACOS.md)). In class, prefer the **45-minute timed path** with [`starter/`](starter/README.md); the **full path** is every Step below. Skip `solution/` unless your instructor says otherwise. See [Which file do I open?](../../../_PARTICIPANT-FILE-GUIDE.md).
 
 ## Activity card
 
@@ -58,7 +58,7 @@ Labs and exercises are **practice only**. Nothing is submitted or graded. Do not
 | 7 | Drop/recreate proof + `design-decisions.md` |
 | 8 | JDBC URL note for Java; no passwords in Git |
 
-**Do not commit:** `target/`, secrets, `.env`, copied answer keys.
+**Do not commit:** `target/`, secrets, `.env`, verbatim instructor `solution/`.
 
 ## Lab Overview
 
@@ -108,7 +108,7 @@ flowchart TB
 
 ## Prerequisites
 
-* Docker Desktop **or** instructor shared PostgreSQL
+* Docker Desktop **or** instructor shared PostgreSQL. If you need Desktop, install it in [Lab 0 Step 11](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-GUIDE.md) ([Windows](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-WINDOWS.md#step-11--install-docker-desktop) · [macOS](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-MACOS.md#step-11--install-docker-desktop)).
 * `psql` client (or `docker exec … psql`) · optional pgAdmin
 * Git; no secrets committed
 

@@ -28,7 +28,7 @@ Week 6   Capstone                         Deliver a production-style CRM
 | Database | **PostgreSQL** |
 | Containers | Docker images, GHCR |
 | Orchestration | **OpenShift** (Projects, Routes, `oc`) |
-| CI/CD | **GitHub Actions** + code scanning (not Bitbucket) |
+| CI/CD | **GitHub Actions** + code scanning |
 | IaC | Ansible, Terraform |
 | Tests | JUnit, Mockito, Selenium (Angular UI) |
 | AI | GitHub Copilot + weekly AI Threads |

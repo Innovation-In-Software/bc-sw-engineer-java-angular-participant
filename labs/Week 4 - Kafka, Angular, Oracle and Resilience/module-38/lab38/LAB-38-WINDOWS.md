@@ -10,7 +10,7 @@
 
 ## Prerequisites (Windows)
 
-- Lab 37 schema available; Docker Desktop running
+- Lab 37 schema available; **Docker Desktop** running — [Lab 0 Windows Step 11](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-WINDOWS.md#step-11--install-docker-desktop)
 - IntelliJ SDK **21**
 
 ## Paths (Windows)
