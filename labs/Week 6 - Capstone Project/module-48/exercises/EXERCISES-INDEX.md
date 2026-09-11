@@ -53,11 +53,11 @@ java -version
 
 | # | Exercise | New skill | File |
 | --- | --- | --- | --- |
-| 1 | Sketch Context Diagram | C4 context warmup | [`exercise-01-context-sketch.md`](exercise-01-context-sketch.md) |
-| 2 | Draft Measurable NFRs | NFR measurability | [`exercise-02-nfr-placeholders.md`](exercise-02-nfr-placeholders.md) |
-| 3 | Sketch Vertical Stories | Backlog slicing | [`exercise-03-backlog-slice.md`](exercise-03-backlog-slice.md) |
-| 4 | Fill ADR Topic TODOs | Decision shortlist | [`exercise-04-adr-todos.md`](exercise-04-adr-todos.md) |
-| 5 | Outline Risk Register | Risk ownership | [`exercise-05-risk-register.md`](exercise-05-risk-register.md) |
-| 6 | Planning Docs Checklist | Evidence gate warmup | [`exercise-06-docs-checklist.md`](exercise-06-docs-checklist.md) |
+| 1 | Sketch Context Diagram | C4 context warmup | [`exercise-01-stack-freeze.md`](exercise-01-stack-freeze.md) |
+| 2 | Draft Measurable NFRs | NFR measurability | [`exercise-02-actions-plan-sketch.md`](exercise-02-actions-plan-sketch.md) |
+| 3 | Sketch Vertical Stories | Backlog slicing | [`exercise-03-iac-plan-sketch.md`](exercise-03-iac-plan-sketch.md) |
+| 4 | Fill ADR Topic TODOs | Decision shortlist | [`exercise-04-ai-usage-plan.md`](exercise-04-ai-usage-plan.md) |
+| 5 | Outline Risk Register | Risk ownership | [`exercise-05-environment-strategy.md`](exercise-05-environment-strategy.md) |
+| 6 | Planning Docs Checklist | Evidence gate warmup | [`exercise-06-backlog-and-readiness.md`](exercise-06-backlog-and-readiness.md) |
 
 Keep all work separate from `examples/lab48-crm` (or the lab’s named project folder); that project begins in the full lab.
