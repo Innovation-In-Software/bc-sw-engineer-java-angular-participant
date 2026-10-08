@@ -2,7 +2,7 @@
 
 > **Start:** [`../README.md`](../README.md) · **Lab:** [`../lab42/LAB-42-GUIDE.md`](../lab42/LAB-42-GUIDE.md)
 
-**Module:** 42 — Kubernetes (k3s) Deployment
+**Module:** 42 — Kubernetes and OpenShift Deployment
 **Next:** [`../lab42/LAB-42-WINDOWS.md`](../lab42/LAB-42-WINDOWS.md) or [`../lab42/LAB-42-MACOS.md`](../lab42/LAB-42-MACOS.md) → [`../lab42/LAB-42-GUIDE.md`](../lab42/LAB-42-GUIDE.md)
 
 Complete **in order 1 → 2 → 3 → 4 → 5 → 6**, at the slide checkpoints — not all slides first.
@@ -21,19 +21,17 @@ Notes live under `examples/module-42-exercises/` — these are **notes files**, 
 
 Then **checkpoint E** → Lab 42.
 
-## k3s slides, OpenShift lab
+## OpenShift lab
 
-Module 42's slides teach Kubernetes on the shared **k3s** training cluster and
-compare it with OpenShift. **Lab 42 runs on OpenShift**, so these exercises use
-OpenShift names. The concepts are identical -- only the wrapper differs:
+Lab 42 runs on the instructor-hosted **OpenShift** Project. Use `oc`, a Project, and a Route. Laptop k3s, `kubectl`, and Ingress are not the lab path.
 
-| On the slides (k3s) | In Lab 42 (OpenShift) |
+| Not the lab path | Lab 42 (OpenShift) |
 | --- | --- |
-| `kubectl` | `oc` (a superset of `kubectl`) |
-| Namespace | Project |
+| `kubectl` | `oc` |
+| Namespace on k3s | Project |
 | Ingress (Traefik) | Route |
 
-Write your notes using the OpenShift column -- that is what Lab 42 grades.
+Write your notes using the OpenShift column. That is what Lab 42 grades.
 
 ## Scope boundary — do not build later technology yet
 

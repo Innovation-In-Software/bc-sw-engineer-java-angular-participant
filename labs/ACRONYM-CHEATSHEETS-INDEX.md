@@ -38,7 +38,7 @@ One plain-language **term → full form → simple meaning** sheet per module, a
 | 30 | Event-Driven Architecture with Kafka | [Week 4 - Kafka, Angular, Oracle and Resilience/module-30/ACRONYM-CHEATSHEET.md](Week 4 - Kafka, Angular, Oracle and Resilience/module-30/ACRONYM-CHEATSHEET.md) | 26 |
 | 31 | Kafka Integration with Spring Boot | [Week 4 - Kafka, Angular, Oracle and Resilience/module-31/ACRONYM-CHEATSHEET.md](Week 4 - Kafka, Angular, Oracle and Resilience/module-31/ACRONYM-CHEATSHEET.md) | 23 |
 | 32 | Resilience and Fault Tolerance | [Week 4 - Kafka, Angular, Oracle and Resilience/module-32/ACRONYM-CHEATSHEET.md](Week 4 - Kafka, Angular, Oracle and Resilience/module-32/ACRONYM-CHEATSHEET.md) | 24 |
-| 33 | React Component Development | [Week 4 - Kafka, Angular, Oracle and Resilience/module-33/ACRONYM-CHEATSHEET.md](Week 4 - Kafka, Angular, Oracle and Resilience/module-33/ACRONYM-CHEATSHEET.md) | 18 |
+| 33 | Angular Component Architecture | [Week 4 - Kafka, Angular, Oracle and Resilience/module-33/ACRONYM-CHEATSHEET.md](Week 4 - Kafka, Angular, Oracle and Resilience/module-33/ACRONYM-CHEATSHEET.md) | 18 |
 | 34 | State and Event Management | [Week 4 - Kafka, Angular, Oracle and Resilience/module-34/ACRONYM-CHEATSHEET.md](Week 4 - Kafka, Angular, Oracle and Resilience/module-34/ACRONYM-CHEATSHEET.md) | 13 |
 | 35 | Frontend and API Integration | [Week 4 - Kafka, Angular, Oracle and Resilience/module-35/ACRONYM-CHEATSHEET.md](Week 4 - Kafka, Angular, Oracle and Resilience/module-35/ACRONYM-CHEATSHEET.md) | 28 |
 | 36 | Frontend Security | [Week 4 - Kafka, Angular, Oracle and Resilience/module-36/ACRONYM-CHEATSHEET.md](Week 4 - Kafka, Angular, Oracle and Resilience/module-36/ACRONYM-CHEATSHEET.md) | 33 |
@@ -47,7 +47,7 @@ One plain-language **term → full form → simple meaning** sheet per module, a
 | 39 | Spring Data JPA and PostgreSQL | [Week 4 - Kafka, Angular, Oracle and Resilience/module-39/ACRONYM-CHEATSHEET.md](Week 4 - Kafka, Angular, Oracle and Resilience/module-39/ACRONYM-CHEATSHEET.md) | 28 |
 | 40 | Application Security Testing | [Week 5 - DevOps, CI-CD and OpenShift/module-40/ACRONYM-CHEATSHEET.md](Week 5 - DevOps, CI-CD and OpenShift/module-40/ACRONYM-CHEATSHEET.md) | 43 |
 | 41 | Containerization with Docker | [Week 5 - DevOps, CI-CD and OpenShift/module-41/ACRONYM-CHEATSHEET.md](Week 5 - DevOps, CI-CD and OpenShift/module-41/ACRONYM-CHEATSHEET.md) | 10 |
-| 42 | Kubernetes (k3s) Deployment | [Week 5 - DevOps, CI-CD and OpenShift/module-42/ACRONYM-CHEATSHEET.md](Week 5 - DevOps, CI-CD and OpenShift/module-42/ACRONYM-CHEATSHEET.md) | 17 |
+| 42 | Kubernetes and OpenShift Deployment | [Week 5 - DevOps, CI-CD and OpenShift/module-42/ACRONYM-CHEATSHEET.md](Week 5 - DevOps, CI-CD and OpenShift/module-42/ACRONYM-CHEATSHEET.md) | 17 |
 | 43 | GitHub Actions and CI/CD Integration | [Week 5 - DevOps, CI-CD and OpenShift/module-43/ACRONYM-CHEATSHEET.md](Week 5 - DevOps, CI-CD and OpenShift/module-43/ACRONYM-CHEATSHEET.md) | 12 |
 | 44 | Continuous Delivery and Release Management | [Week 5 - DevOps, CI-CD and OpenShift/module-44/ACRONYM-CHEATSHEET.md](Week 5 - DevOps, CI-CD and OpenShift/module-44/ACRONYM-CHEATSHEET.md) | 10 |
 | 45 | Infrastructure as Code with Terraform and Ansible | [Week 5 - DevOps, CI-CD and OpenShift/module-45/ACRONYM-CHEATSHEET.md](Week 5 - DevOps, CI-CD and OpenShift/module-45/ACRONYM-CHEATSHEET.md) | 39 |

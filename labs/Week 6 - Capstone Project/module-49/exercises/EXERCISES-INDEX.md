@@ -25,7 +25,7 @@ Then **checkpoint E** → Lab 49.
 
 | Do now | Do not yet |
 | --- | --- |
-| Slice, layers, versioned event, test/demo DoD | React UI (Lab 50); full JWT hardening (Lab 51) |
+| Slice, layers, versioned event, test/demo DoD | Angular UI (Lab 50); full JWT hardening (Lab 51) |
 | Failure-path plan | Weaken validation for demos |
 
 ## Workspace

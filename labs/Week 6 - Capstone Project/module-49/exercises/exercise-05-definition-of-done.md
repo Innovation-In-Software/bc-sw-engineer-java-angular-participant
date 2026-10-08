@@ -30,7 +30,7 @@ Starting Lab 51 JWT deep-dive instead of slice DoD — sequence?
 | Symptom | Fix |
 | --- | --- |
 | DoD without tests | Require verify + one failure path |
-| React work now | Lab 50 |
+| Angular work now | Lab 50 |
 
 **Module 49** · Analysis exercise · [setup + file names](EXERCISES-INDEX.md)
 

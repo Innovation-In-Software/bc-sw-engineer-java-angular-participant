@@ -13,7 +13,7 @@
 **How you work:** On your **laptop** with **IntelliJ IDEA Community** (primary) or **VS Code** (optional).  
 Paths and compile/run: [`_IDE-CONVENTIONS.md`](_IDE-CONVENTIONS.md).
 
-**Cohort environment:** Week 1 uses **laptop tools only** (JDK 21, IDE, Git, Maven). Shared **Oracle Database**, **Apache Kafka**, and **OpenShift** start in **Week 4+** — see [FINAL-SETUP-README.md](../FINAL-SETUP-README.md). CI/CD later in the course is **GitHub Actions**.
+**Cohort environment:** Week 1 uses **laptop tools only** (JDK 21, IDE, Git, Maven). Shared **PostgreSQL**, **Apache Kafka**, and **OpenShift** start in **Week 4+** — see [FINAL-SETUP-README.md](../FINAL-SETUP-README.md). CI/CD later in the course is **GitHub Actions**.
 
 ## Per-module sequence (Modules 1–7)
 

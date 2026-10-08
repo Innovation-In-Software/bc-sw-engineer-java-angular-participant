@@ -1,6 +1,6 @@
 # Setup instructions — Java & Angular Fullstack
 
-Verified baseline for this **new** course folder. Shared services are **Oracle + Kafka + OpenShift**. CI/CD is **GitHub Actions**.
+Verified baseline for this **new** course folder. Shared services are **PostgreSQL + Kafka + OpenShift**. CI/CD is **GitHub Actions**.
 
 ## Weeks 0–3 (laptop only)
 
@@ -23,12 +23,12 @@ npm -v
 ng version        # Angular CLI
 ```
 
-Instructor issues Oracle JDBC URL + Kafka bootstrap **before** Labs 30 / 37.
+Instructor issues PostgreSQL JDBC URL + Kafka bootstrap **before** Labs 30 / 37.
 
-Example JDBC shape (host/service filled in by instructor):
+Example JDBC shape (host and database filled in by instructor):
 
 ```text
-jdbc:oracle:thin:@//ORACLE_HOST:1521/ORACLE_SERVICE
+jdbc:postgresql://POSTGRES_HOST:5432/POSTGRES_DB
 ```
 
 Connect with your assigned schema. Do not use a different database for labs in this course.
@@ -68,7 +68,7 @@ GitHub Actions workflow lives in **your** `java-bootcamp` repo (`.github/workflo
 | Spring Boot (typical) | 8080 |
 | Angular `ng serve` | 4200 |
 
-Shared Oracle / Kafka / OpenShift ports are on the instructor host, not localhost.
+Shared PostgreSQL / Kafka / OpenShift ports are on the instructor host, not localhost.
 
 ## If it fails
 
@@ -76,7 +76,7 @@ Shared Oracle / Kafka / OpenShift ports are on the instructor host, not localhos
 | ------- | ----- |
 | Wrong Java | `JAVA_HOME` and IntelliJ SDK both 21 |
 | `ng` not found | Node 22 on PATH; reopen the terminal |
-| Oracle connection refused | allowlist / VPN; JDBC host from instructor sheet |
+| PostgreSQL connection refused | allowlist / VPN; JDBC host from instructor sheet |
 | `oc` unauthorized | expired token; re-run `oc login` |
 | `docker` not found / engine down | Follow Lab 0 Step 11; start Docker Desktop; `docker version` must show **Server** before Lab 37 / Lab 41 |
 | Actions not running | workflow in **your** repo, not the course clone |

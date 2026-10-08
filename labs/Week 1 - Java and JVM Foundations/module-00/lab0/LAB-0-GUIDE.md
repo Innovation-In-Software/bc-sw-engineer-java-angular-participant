@@ -1,6 +1,6 @@
 # Lab 0: Development Environment Setup
 
-> **Java & Angular Fullstack Bootcamp.** Shared services from Week 4 onward are **Oracle Database**, **Apache Kafka**, and **OpenShift** (not PostgreSQL / k3s). CI/CD is **GitHub Actions**. See [FINAL-SETUP-README.md](../../../FINAL-SETUP-README.md).
+> **Java & Angular Fullstack Bootcamp.** Shared services from Week 4 onward are **PostgreSQL**, **Apache Kafka**, and **OpenShift** (not Oracle / laptop k3s). CI/CD is **GitHub Actions**. See [FINAL-SETUP-README.md](../../../FINAL-SETUP-README.md).
 
 **Module:** Pre-course  
 **Lab folder:** `labs/Week 1 - Java and JVM Foundations/module-00/lab0/`  

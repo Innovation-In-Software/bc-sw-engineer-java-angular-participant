@@ -1,12 +1,12 @@
 # Final lab environment — Java & Angular Fullstack
 
-This course uses **instructor-hosted shared services** from Week 4 onward. Participants develop on their laptop. They do **not** install Oracle, Kafka, or OpenShift locally.
+This course uses **instructor-hosted shared services** from Week 4 onward. Participants develop on their laptop. They do **not** install PostgreSQL, Kafka, or OpenShift locally.
 
 **Stack (Option A — matches the Angular outline):**
 
 | Shared service | Used from | Client on the laptop |
 | -------------- | --------- | -------------------- |
-| **Oracle Database** | Week 4 (Labs 37–39, 50) | SQL Developer, SQLcl, or SQL*Plus (optional) |
+| **PostgreSQL** | Week 4 (Labs 37–39, 50) | `psql` or another SQL client (optional) |
 | **Apache Kafka** | Week 4 (Labs 30–32, 46, 49) | none required (Spring Kafka from the app) |
 | **OpenShift** | Week 5 (Labs 42, 51) | `oc` + instructor login / kubeconfig |
 | **GitHub Actions + GHCR** | Week 5 (Labs 43–44, 51) | GitHub account |
@@ -23,7 +23,7 @@ flowchart LR
     OC["oc CLI"]
   end
   subgraph Shared["Instructor-hosted shared env"]
-    ORA["Oracle Database"]
+    PG["PostgreSQL"]
     KF["Apache Kafka"]
     OS["OpenShift"]
     GHCR["GHCR images"]
