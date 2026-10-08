@@ -1,6 +1,6 @@
 # Module 42 — Start here
 
-**Topic:** Kubernetes and OpenShift Architecture
+**Topic:** Kubernetes and k3s Architecture
 
 **Lab:** [`lab42/LAB-42-GUIDE.md`](lab42/LAB-42-GUIDE.md)
 
@@ -11,7 +11,7 @@ Full course rule: [Which file do I open?](../../_PARTICIPANT-FILE-GUIDE.md) · [
 ## What this module covers
 
 - Pods, Services, and Deployments for the Northstar CRM API
-- OpenShift Projects, Routes, and `oc` basics
+- k3s namespaces, Routes, and `kubectl` basics
 - Liveness/readiness probes aligned with Spring Actuator
 - ConfigMaps and Secrets overview (no credentials in Git)
 - Conceptual or shared-cluster deploy of the Lab 41 container image
@@ -22,7 +22,7 @@ Full course rule: [Which file do I open?](../../_PARTICIPANT-FILE-GUIDE.md) · [
 - APIs: **REST** · Spring Boot
 - Persistence: **PostgreSQL**
 - Messaging: **Kafka** (env wiring via ConfigMap later)
-- Runtime: **OpenShift**
+- Runtime: **k3s**
 - CI/CD: **GitHub Actions**
 
 ## Timed path

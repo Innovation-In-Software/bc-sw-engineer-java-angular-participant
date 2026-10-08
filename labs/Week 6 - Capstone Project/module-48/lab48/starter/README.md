@@ -30,7 +30,7 @@ cd ~/java-bootcamp/examples/lab48-capstone-plan
 
 ## 45-minute checklist
 
-- [ ] Complete TODOs in `docs/architecture.md` (Angular → REST → Boot → PostgreSQL; Kafka; OpenShift)
+- [ ] Complete TODOs in `docs/architecture.md` (Angular → REST → Boot → PostgreSQL; Kafka; k3s)
 - [ ] Outline `docs/ai-usage-plan.md` and `docs/github-actions-plan.md`
 - [ ] Sketch `docs/environment-strategy.md` + Terraform/Ansible bullets
 - [ ] Seed `docs/backlog.md` with CAP-12 acceptance
@@ -41,7 +41,7 @@ cd ~/java-bootcamp/examples/lab48-capstone-plan
 ```powershell
 # From lab48-capstone-plan — files exist and mention PostgreSQL + GitHub Actions + Angular
 Get-ChildItem docs
-Select-String -Path docs\*.md -Pattern 'PostgreSQL|Angular|GitHub Actions|OpenShift'
+Select-String -Path docs\*.md -Pattern 'PostgreSQL|Angular|GitHub Actions|k3s'
 ```
 
 ## Timed-path Pass criteria

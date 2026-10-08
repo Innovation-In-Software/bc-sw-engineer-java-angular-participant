@@ -9,6 +9,6 @@ Participant entry: **[LAB-51-GUIDE.md](LAB-51-GUIDE.md)**
 
 **Timed path:** [starter/README.md](starter/README.md) → `~/java-bootcamp/examples/lab51-capstone`.
 
-**Focus:** GitHub Actions E2E · PR gates · Angular + Java · SAST · container scan · Terraform/Ansible stages · OpenShift deploy · OIDC/secrets · smoke/rollback.
+**Focus:** GitHub Actions E2E · PR gates · Angular + Java · SAST · container scan · Terraform/Ansible stages · k3s deploy · OIDC/secrets · smoke/rollback.
 
 **Module hub:** [../README.md](../README.md)

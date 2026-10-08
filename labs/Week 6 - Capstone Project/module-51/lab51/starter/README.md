@@ -1,6 +1,6 @@
 # Lab 51 starter — timed path (~45 minutes)
 
-**Theme:** Fullstack GitHub Actions gates + OpenShift deploy discipline
+**Theme:** Fullstack GitHub Actions gates + k3s deploy discipline
 
 ## Activity card
 
@@ -37,14 +37,14 @@ cd ~/java-bootcamp/examples/lab51-capstone
 - [ ] Complete `.github/workflows/capstone-ci.yml` TODOs (PR triggers, jobs)
 - [ ] Angular job: `npm ci` + `npx ng build`
 - [ ] Backend job: `mvn -B clean verify` (postgres service)
-- [ ] Fill `capstone-cd.yml` `oc set image` (no Maven package)
+- [ ] Fill `capstone-cd.yml` `kubectl set image` (no Maven package)
 - [ ] Document secret **names** only in `docs/capstone-cicd-runbook.md`
 - [ ] Push a branch when a GitHub repo is available; capture Actions screenshot (redact)
 
 ## Smoke test (laptop, no cluster)
 
 ```powershell
-Select-String -Path .github\workflows\*.yml -Pattern 'npx ng build|mvn -B clean verify|oc set image'
+Select-String -Path .github\workflows\*.yml -Pattern 'npx ng build|mvn -B clean verify|kubectl set image'
 ```
 
 GitHub only auto-runs workflows from the **repository root**.

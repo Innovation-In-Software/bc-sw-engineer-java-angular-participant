@@ -52,7 +52,7 @@ Here is the shape of a complete answer for this exercise. Adapt the content — 
 
 ## Split the Work
 
-Terraform provisions the OpenShift project, quotas, routes, and managed PostgreSQL. Ansible configures app settings, env vars, and DB users.
+Terraform provisions the k3s project, quotas, routes, and managed PostgreSQL. Ansible configures app settings, env vars, and DB users.
 
 ## State
 

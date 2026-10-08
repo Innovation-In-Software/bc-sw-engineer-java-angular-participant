@@ -12,7 +12,7 @@ Full course rule: [Which file do I open?](../../_PARTICIPANT-FILE-GUIDE.md) · [
 
 - Freeze Angular → REST → Spring Boot → PostgreSQL architecture
 - Spring Boot ↔ Kafka messaging view
-- GitHub → Actions (security/test/build) → OpenShift delivery path
+- GitHub → Actions (security/test/build) → k3s delivery path
 - AI usage plan, Terraform/Ansible plan, environment strategy
 - Capstone backlog seeds (CAP-12 for Lab 49)
 
@@ -22,7 +22,7 @@ Full course rule: [Which file do I open?](../../_PARTICIPANT-FILE-GUIDE.md) · [
 - APIs: **REST** · Spring Boot
 - Persistence: **PostgreSQL**
 - Messaging: **Kafka**
-- Runtime: **OpenShift** · Docker images
+- Runtime: **k3s** · Docker images
 - CI/CD: **GitHub Actions**
 - IaC: **Terraform** · **Ansible**
 

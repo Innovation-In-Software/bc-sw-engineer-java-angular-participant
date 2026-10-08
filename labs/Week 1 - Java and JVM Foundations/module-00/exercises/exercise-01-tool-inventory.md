@@ -18,7 +18,7 @@ Name IntelliJ IDEA Community as primary; VS Code optional.
 
 ### Step 3 — Later stack
 
-Note Docker Desktop is **required** (Lab 0 OS how-to **Step 11**; finish before Week 4). Node is used from Week 4+; OpenShift is instructor-hosted `oc`, not a local cluster install.
+Note Docker Desktop is **required** (Lab 0 OS how-to **Step 11**; finish before Week 4). Node is used from Week 4+; k3s is instructor-hosted `kubectl`, not a local cluster install.
 
 ### Step 4 — Capture
 
@@ -36,4 +36,4 @@ _Check **Pass** or **Fail** yourself. Do not write these marks anywhere — noth
 | --- | --- | --- |
 | 1 | Four core tools listed | Pass / Fail |
 | 2 | IntelliJ named primary | Pass / Fail |
-| 3 | No local OpenShift install planned | Pass / Fail |
+| 3 | Shared k3s install planned | Pass / Fail |

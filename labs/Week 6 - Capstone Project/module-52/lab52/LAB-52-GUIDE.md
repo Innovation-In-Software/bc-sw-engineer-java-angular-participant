@@ -160,7 +160,7 @@ curl -i -X POST "http://localhost:8080/api/v1/interactions" \
   -H 'X-Correlation-ID: lab-request-001' \
   -d '{"customerId":"CUS-1001","interactionType":"NOTE","summary":"Resolved login question"}'
 oc get pods -l app=crm-api
-oc rollout history deployment/crm-api
+kubectl rollout history deployment/crm-api
 ```
 
 **What to notice:** Match names, IDs, and failure behavior from the scenario — instructors check these.
@@ -273,7 +273,7 @@ curl -i -X POST "http://localhost:8080/api/v1/interactions" \
   -H 'X-Correlation-ID: lab-request-001' \
   -d '{"customerId":"CUS-1001","interactionType":"NOTE","summary":"Resolved login question"}'
 oc get pods -l app=crm-api
-oc rollout history deployment/crm-api
+kubectl rollout history deployment/crm-api
 ```
 
 Failover script language (practice aloud):

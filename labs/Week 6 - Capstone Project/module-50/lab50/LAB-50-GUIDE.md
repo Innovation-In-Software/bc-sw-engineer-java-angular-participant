@@ -284,7 +284,7 @@ curl -fsS -H "Authorization: Bearer lab-demo-token" "http://localhost:8080/api/v
 git status --short
 ```
 
-**Keep `lab50-capstone`**—Lab 51 builds CI/CD and OpenShift deploy on this tree.
+**Keep `lab50-capstone`**—Lab 51 builds CI/CD and k3s deploy on this tree.
 
 ## Reflection Questions
 

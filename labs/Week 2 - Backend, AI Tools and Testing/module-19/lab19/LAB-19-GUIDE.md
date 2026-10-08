@@ -331,7 +331,7 @@ mvn -q clean
 git status
 ```
 
-**Keep `lab19-crm`** — later modules deepen JPA/Postgres and OpenShift deploy checks.
+**Keep `lab19-crm`** — later modules deepen JPA/Postgres and k3s deploy checks.
 
 ## Reflection Questions
 

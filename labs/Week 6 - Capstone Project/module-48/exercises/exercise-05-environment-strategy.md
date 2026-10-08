@@ -11,7 +11,7 @@
 
 ### What you will learn
 
-Map four environments to OpenShift Projects and write evidence-based promotion gates.
+Map four environments to k3s namespaces and write evidence-based promotion gates.
 
 ### Enterprise context
 
@@ -107,7 +107,7 @@ Confirm fixtures if used: Amina `CUS-1001`/`ACTIVE`, Ravi `CUS-1002`/`PROSPECT`,
 
 ## Expected result
 
-Four environments mapped to OpenShift Projects, a same-digest promotion rule, named gates, and a synthetic-data rule in `notes/lab48-environment-strategy.md`.
+Four environments mapped to k3s namespaces, a same-digest promotion rule, named gates, and a synthetic-data rule in `notes/lab48-environment-strategy.md`.
 
 ## If it fails
 

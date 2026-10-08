@@ -20,4 +20,4 @@ Full course rule: [Which file do I open?](../../_PARTICIPANT-FILE-GUIDE.md) · [
 
 **Critical:** PostgreSQL driver + datasource config; entities; `JpaRepository`; derived queries; relationships; lazy/eager; `Pageable`; Flyway (Liquibase concept); IT on real PostgreSQL. `ddl-auto=validate`. Lab project: `examples/lab39-crm/`. Lab 40 expects this verify-green baseline.
 
-**Stack for this course:** Angular · REST · **PostgreSQL** · Spring Data JPA · OpenShift · GitHub Actions
+**Stack for this course:** Angular · REST · **PostgreSQL** · Spring Data JPA · k3s · GitHub Actions

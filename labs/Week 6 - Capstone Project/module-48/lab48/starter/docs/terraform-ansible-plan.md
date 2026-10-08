@@ -1,7 +1,7 @@
 # Terraform / Ansible plan — TODO (Lab 48)
 
 ## Terraform
-- Scope (non-prod): OpenShift Project names — TODO
+- Scope (non-prod): k3s namespace names — TODO
 - State backend (no credentials in Git):
 - Forbidden: public DB, committed `*.tfstate`
 

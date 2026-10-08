@@ -40,7 +40,7 @@ cd $env:USERPROFILE\java-bootcamp\examples\lab49-crm\backend
 mvn -B test
 ```
 
-Verified on this laptop (2026-08-28), Temurin 21.0.11, Maven 3.9.9: solution **Tests run: 2** (`create_forAmina_returnsCreatedShape`, `create_unknownCustomer_fails`). In-memory session store — no Docker, Kafka broker, PostgreSQL, or OpenShift required for the timed path. Do **not** use `kubectl`/k3s. Angular UI is Lab 50.
+Verified on this laptop (2026-08-28), Temurin 21.0.11, Maven 3.9.9: solution **Tests run: 2** (`create_forAmina_returnsCreatedShape`, `create_unknownCustomer_fails`). In-memory session store — no Docker, Kafka broker, PostgreSQL, or k3s required for the timed path. Use `kubectl` on the shared k3s cluster. Angular UI is Lab 50.
 
 ## Do the lab
 

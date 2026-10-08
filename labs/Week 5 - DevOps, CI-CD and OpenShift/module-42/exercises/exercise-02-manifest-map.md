@@ -30,7 +30,7 @@ Your Secret YAML has real base64 values and is committed. Is base64 encryption?
 | Symptom | Fix |
 | --- | --- |
 | Secret values in Git | Only secret.example.yaml with no values |
-| Objects missing | Include Project, ConfigMap, Secret, Deployment, Service, Route |
+| Objects missing | Include Project, ConfigMap, Secret, Deployment, Service, Ingress |
 | Image not pinned | Digest from Lab 41 |
 
 **Module 42** · Pre-lab exercise · [setup + file names](EXERCISES-INDEX.md)

@@ -39,7 +39,7 @@ cd ..\frontend; npx ng build
 
 Optional live UI: `npx ng serve` plus `mvn -B spring-boot:run` in `backend`. Demo Bearer is `lab-demo-token`.
 
-Verified on this laptop (2026-08-28), Temurin 21.0.11, Maven 3.9.9, Node v24.18.0: solution **Tests run: 3** against Docker PostgreSQL 16; `npx ng build` succeeds when overlaid on the Lab 33 `node_modules` tree. Do **not** use `kubectl`/k3s. Angular is the taught UI — not React.
+Verified on this laptop (2026-08-28), Temurin 21.0.11, Maven 3.9.9, Node v24.18.0: solution **Tests run: 3** against Docker PostgreSQL 16; `npx ng build` succeeds when overlaid on the Lab 33 `node_modules` tree. Use `kubectl` on the shared k3s cluster. Angular is the taught UI — not React.
 
 ## Do the lab
 

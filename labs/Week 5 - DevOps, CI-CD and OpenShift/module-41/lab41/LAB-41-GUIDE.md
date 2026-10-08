@@ -573,7 +573,7 @@ git status --short
 
 Keep Dockerfile and runbook; delete plaintext env files from shared hosts.
 
-**Keep `lab41-crm`**—Lab 42 deploys this image on OpenShift with Deployment/Service/Route and probes.
+**Keep `lab41-crm`**—Lab 42 deploys this image on k3s with Deployment/Service/Ingress and probes.
 
 
 ## Reflection Questions

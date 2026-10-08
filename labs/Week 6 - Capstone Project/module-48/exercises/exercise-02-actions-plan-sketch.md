@@ -30,7 +30,7 @@ Your plan lists `mvn verify` but no `ng test` — what breaks, and when do you f
 | Symptom | Fix |
 | --- | --- |
 | Only backend jobs listed | Add the Angular half: npm ci, ng test, ng build |
-| Deploy set to automatic | Taught path is tag + manual approval for OpenShift |
+| Deploy set to automatic | Taught path is tag + manual approval for k3s |
 | Gates listed but not enforced | Say explicitly which gate fails the build |
 
 **Module 48** · Pre-lab exercise · [setup + file names](EXERCISES-INDEX.md)
@@ -64,7 +64,7 @@ Dependency scan (fail on High), SAST, container build + image scan before any pu
 
 ## Deploy Ownership
 
-Only the release owner approves the OpenShift environment; deploy never runs unattended.
+Only the release owner approves the k3s environment; deploy never runs unattended.
 ## Scope
 Pre-lab only — do not finish the full lab in this exercise.
 ```

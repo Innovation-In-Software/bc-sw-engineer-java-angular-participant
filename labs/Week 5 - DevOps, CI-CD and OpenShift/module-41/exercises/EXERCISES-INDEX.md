@@ -24,7 +24,7 @@ Then **checkpoint E** → Lab 41.
 
 | Do now | Do not yet |
 | --- | --- |
-| Multi-stage, dockerignore, health, digest, smoke plans | OpenShift (Lab 42) / GitHub Actions package (Lab 43) |
+| Multi-stage, dockerignore, health, digest, smoke plans | k3s (Lab 42) / GitHub Actions package (Lab 43) |
 | Runtime env via `.env.example` | Secrets in image layers / `:latest`-only release |
 
 ## Workspace

@@ -15,7 +15,7 @@ Plan build/run/readiness/CUS-1001 smoke + graceful stop checks.
 
 ### Enterprise context
 
-Hard gate evidence before OpenShift deploy.
+Hard gate evidence before k3s deploy.
 
 ### Predict
 

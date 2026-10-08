@@ -3,7 +3,7 @@
 **Topic:** Professional Communication and Collaboration  
 **Use when:** reviewing slides, pre-lab exercises, or the module lab. Quick meanings in plain language; full forms match how this module’s deck uses each term.
 
-_This module is a documentation/communication lab, not a coding module — most of its vocabulary is process and role terminology rather than technical acronyms. A few earlier-module tools (Terraform, Ansible, Docker, Kubernetes, OpenShift, DAST/SAST, KPI/OKR/SMART, MVP, Canary, GitHub Actions) are **not** actually used anywhere in this deck's slide text, even though the Week 5 arc mentions them in passing — they were removed from this sheet. What remains below is grounded in the deck's real content: shared-fact-base discipline, incident updates, PR descriptions, stakeholder email, and Agile/Scrum roles carried over from the Module 46 incident scenario._
+_This module is a documentation/communication lab, not a coding module — most of its vocabulary is process and role terminology rather than technical acronyms. A few earlier-module tools (Terraform, Ansible, Docker, Kubernetes, k3s, DAST/SAST, KPI/OKR/SMART, MVP, Canary, GitHub Actions) are **not** actually used anywhere in this deck's slide text, even though the Week 5 arc mentions them in passing — they were removed from this sheet. What remains below is grounded in the deck's real content: shared-fact-base discipline, incident updates, PR descriptions, stakeholder email, and Agile/Scrum roles carried over from the Module 46 incident scenario._
 
 ---
 

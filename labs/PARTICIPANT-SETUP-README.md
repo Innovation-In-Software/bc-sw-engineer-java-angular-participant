@@ -2,7 +2,7 @@
 
 > **Practice only.** Labs and exercises are for your own GitHub repo. Nothing is submitted or graded. Do not take screenshots.
 
-Install tools on **your laptop**. Shared PostgreSQL, Kafka, and OpenShift are provided by the instructor.
+Install tools on **your laptop**. Shared PostgreSQL, Kafka, and k3s are provided by the instructor.
 
 ## Laptop install (Lab 0 and before Week 4)
 
@@ -21,17 +21,17 @@ Install tools on **your laptop**. Shared PostgreSQL, Kafka, and OpenShift are pr
 
 | Tool | Notes |
 | ---- | ----- |
-| **oc** (OpenShift CLI) | Deploy into the shared OpenShift project the instructor assigns |
+| **oc** (k3s CLI) | Deploy into the shared k3s project the instructor assigns |
 
 ## Instructor provides (not in Git)
 
 - PostgreSQL username / password / JDBC URL (per-student schema)
 - Kafka bootstrap address
-- OpenShift `oc login` (or kubeconfig) and project name
+- k3s `kubectl` (or kubeconfig) and project name
 - GitHub org / GHCR guidance and Copilot license as assigned
 
 ## Do not install locally
 
-a standalone database server, a local Kafka cluster, or OpenShift Local / CRC — unless the instructor explicitly allows optional practice.
+a standalone database server, a local Kafka cluster, or a local k3s or k3d cluster — unless the instructor explicitly allows optional practice.
 
 Full matrix: [SETUP-INSTRUCTIONS.md](SETUP-INSTRUCTIONS.md) · Shared env: [FINAL-SETUP-README.md](FINAL-SETUP-README.md)

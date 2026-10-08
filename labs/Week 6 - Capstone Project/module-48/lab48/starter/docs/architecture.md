@@ -5,7 +5,7 @@ Angular SPA → REST (JWT) → Spring Boot → PostgreSQL
 Spring Boot ↔ Kafka
 
 ## Mandatory delivery path
-GitHub → Actions (security / test / build) → OpenShift
+GitHub → Actions (security / test / build) → k3s
 
 ## Non-goals (do not teach as primary path)
 Bitbucket Pipelines · Oracle · React · SOAP

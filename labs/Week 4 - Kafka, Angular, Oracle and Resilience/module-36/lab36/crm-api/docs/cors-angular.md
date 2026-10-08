@@ -16,4 +16,4 @@
 
 ## Production note
 
-Prefer OpenShift / API-gateway CORS policy over `Access-Control-Allow-Origin: *` with credentials. This course is REST/JSON only.
+Prefer k3s / API-gateway CORS policy over `Access-Control-Allow-Origin: *` with credentials. This course is REST/JSON only.

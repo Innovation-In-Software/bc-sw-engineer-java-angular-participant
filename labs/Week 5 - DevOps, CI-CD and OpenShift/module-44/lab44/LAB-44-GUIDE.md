@@ -120,7 +120,7 @@ flowchart TB
   CI["Lab 43 CI artifact<br/>JAR checksum / image digest"] --> Man["artifact-manifest.json"]
   Man --> Test["test"]
   Test -->|gates| Stg["staging"]
-  Stg -->|oc set image + Route smoke| Prod["production"]
+  Stg -->|kubectl set image + Ingress smoke| Prod["production"]
   Man --> Rollback["rollback notes"]
 ```
 
@@ -132,8 +132,8 @@ Confirm (Lab 0 tools assumed):
 
 * Lab 43 pipeline building successfully with package-once evidence
 * Environments or variables per instructor (test / staging / prod names)
-* Artifact promotion path defined (registry, GitHub Environments, OpenShift Project)
-* `oc` CLI or Console-only path as the instructor directs (no local OpenShift/k3s)
+* Artifact promotion path defined (registry, GitHub Environments, k3s namespace)
+* `kubectl` CLI or Console-only path as the instructor directs (shared k3s/k3s)
 * No secrets committed to Git
 
 ### Pre-flight
@@ -150,13 +150,13 @@ Study this pattern once before Step 1. Your job is to apply the same idea in the
 ```bash
 set -eu
 : "${RELEASE_DIGEST:?release digest is required}"
-# Adapt Project names to the instructor-hosted OpenShift
-oc set image deployment/crm-api \
+# Adapt Project names to the instructor-hosted k3s
+kubectl set image deployment/crm-api \
   crm-api="registry.example.com/training/crm-api@${RELEASE_DIGEST}"
-oc rollout status deployment/crm-api --timeout=180s
+kubectl rollout status deployment/crm-api --timeout=180s
 curl -fsS -H "X-Correlation-Id: lab-request-001" \
   "${CRM_BASE_URL}/actuator/health/readiness"
-# Smoke fixtures (adapt Route hostname — not localhost)
+# Smoke fixtures (adapt Ingress hostname — not localhost)
 curl -fsS -H "X-Correlation-Id: lab-request-001" -u admin:change-me \
   "${CRM_BASE_URL}/api/customers/CUS-1001"
 ```
@@ -209,7 +209,7 @@ git switch -c lab/44-crm 2>/dev/null || true
 }
 ```
 
-Fill real values from Lab 43 artifacts (replace placeholders deliberately). Wire promotion in `.github/workflows/cd.yml` (starter): `workflow_dispatch` with environment + `artifact_digest`, compare against this manifest, then `oc set image … registry.example.com/training/crm-api@sha256:…` — never rebuild with Maven on the deploy agent. Timed path with no cluster: validate JSON + workflow; live `oc` is homework.
+Fill real values from Lab 43 artifacts (replace placeholders deliberately). Wire promotion in `.github/workflows/cd.yml` (starter): `workflow_dispatch` with environment + `artifact_digest`, compare against this manifest, then `kubectl set image … registry.example.com/training/crm-api@sha256:…` — never rebuild with Maven on the deploy agent. Timed path with no cluster: validate JSON + workflow; live `kubectl` is homework.
 
 ```bash
 sha256sum target/*.jar
@@ -279,20 +279,20 @@ _Check **Pass** or **Fail** yourself. Do not write these marks anywhere — noth
 
 **Why:** First-time promotion should not be production.
 
-**Do this:** Promote the **exact** tested digest to staging (script or `oc set image` by digest). Run smoke and synthetic checks for CRM fixtures. Observe errors, latency, readiness, and Kafka lag if in scope. Smoke the **Route** hostname (Lab 42), not `localhost`.
+**Do this:** Promote the **exact** tested digest to staging (script or `kubectl set image` by digest). Run smoke and synthetic checks for CRM fixtures. Observe errors, latency, readiness, and Kafka lag if in scope. Smoke the **Route** hostname (Lab 42), not `localhost`.
 
 Promotion guard pattern:
 
 ```bash
 set -eu
 : "${RELEASE_DIGEST:?release digest is required}"
-# Adapt Project names to the instructor-hosted OpenShift
-oc set image deployment/crm-api \
+# Adapt Project names to the instructor-hosted k3s
+kubectl set image deployment/crm-api \
   crm-api="registry.example.com/training/crm-api@${RELEASE_DIGEST}"
-oc rollout status deployment/crm-api --timeout=180s
+kubectl rollout status deployment/crm-api --timeout=180s
 curl -fsS -H "X-Correlation-Id: lab-request-001" \
   "${CRM_BASE_URL}/actuator/health/readiness"
-# Smoke fixtures (adapt Route hostname — not localhost)
+# Smoke fixtures (adapt Ingress hostname — not localhost)
 curl -fsS -H "X-Correlation-Id: lab-request-001" -u admin:change-me \
   "${CRM_BASE_URL}/api/customers/CUS-1001"
 ```
@@ -413,9 +413,9 @@ _Check **Pass** or **Fail** yourself. Do not write these marks anywhere — noth
 set -eu
 : "${RELEASE_DIGEST:?release digest is required}"
 : "${CRM_BASE_URL:?}"
-oc set image deployment/crm-api \
+kubectl set image deployment/crm-api \
   crm-api="registry.example.com/training/crm-api@${RELEASE_DIGEST}"
-oc rollout status deployment/crm-api --timeout=180s
+kubectl rollout status deployment/crm-api --timeout=180s
 curl -fsS -H "X-Correlation-Id: lab-request-001" \
   "${CRM_BASE_URL}/actuator/health/readiness"
 curl -fsS -H "X-Correlation-Id: lab-request-001" -u admin:change-me \
@@ -439,7 +439,7 @@ curl -fsS -H "X-Correlation-Id: lab-request-001" -u admin:change-me \
 **Steps**
 
 1. Confirm current digest != known-good
-2. Promote knownGoodPrevious.imageDigest with `oc set image` (or `oc rollout undo`)
+2. Promote knownGoodPrevious.imageDigest with `kubectl set image` (or `kubectl rollout undo`)
 3. Verify readiness + CUS-1001/CUS-1002 smoke on the Route
 4. Record time-to-recover
 
@@ -553,7 +553,7 @@ git status --short
 | Smoke 401/403 | Env secrets / auth drift | Fix config; do not weaken auth |
 | Rollback incomplete | Migration not backward compatible | Follow expand/contract limits |
 | Kafka lag after promote | Consumer incompatibility | Hold GO; check Lab 46 patterns |
-| “Unauthorized” `oc` | Wrong Project / expired token | Confirm instructor `oc login`; no privilege broaden |
+| “Unauthorized” `kubectl` | Wrong Project / expired token | Confirm instructor `kubectl`; no privilege broaden |
 | Checklist unsigned | Process gap | Require approver field |
 | Smoke passes, agents still fail | Synthetic path ≠ real traffic | Expand smoke; watch error budget |
 | Manifest missing prior digest | Forgot known-good capture | Record prior digest before every promote |
@@ -573,7 +573,7 @@ Optional — jot brief notes in your README if useful for your progress check (n
 
 ```bash
 cd ~/java-bootcamp/examples/lab44-crm
-oc whoami 2>/dev/null || true
+kubectl cluster-info 2>/dev/null || true
 git status --short
 ```
 

@@ -47,7 +47,7 @@ One plain-language **term → full form → simple meaning** sheet per module, a
 | 39 | Spring Data JPA and PostgreSQL | [Week 4 - Kafka, Angular, Oracle and Resilience/module-39/ACRONYM-CHEATSHEET.md](Week 4 - Kafka, Angular, Oracle and Resilience/module-39/ACRONYM-CHEATSHEET.md) | 28 |
 | 40 | Application Security Testing | [Week 5 - DevOps, CI-CD and OpenShift/module-40/ACRONYM-CHEATSHEET.md](Week 5 - DevOps, CI-CD and OpenShift/module-40/ACRONYM-CHEATSHEET.md) | 43 |
 | 41 | Containerization with Docker | [Week 5 - DevOps, CI-CD and OpenShift/module-41/ACRONYM-CHEATSHEET.md](Week 5 - DevOps, CI-CD and OpenShift/module-41/ACRONYM-CHEATSHEET.md) | 10 |
-| 42 | Kubernetes and OpenShift Deployment | [Week 5 - DevOps, CI-CD and OpenShift/module-42/ACRONYM-CHEATSHEET.md](Week 5 - DevOps, CI-CD and OpenShift/module-42/ACRONYM-CHEATSHEET.md) | 17 |
+| 42 | Kubernetes and k3s Deployment | [Week 5 - DevOps, CI-CD and OpenShift/module-42/ACRONYM-CHEATSHEET.md](Week 5 - DevOps, CI-CD and OpenShift/module-42/ACRONYM-CHEATSHEET.md) | 17 |
 | 43 | GitHub Actions and CI/CD Integration | [Week 5 - DevOps, CI-CD and OpenShift/module-43/ACRONYM-CHEATSHEET.md](Week 5 - DevOps, CI-CD and OpenShift/module-43/ACRONYM-CHEATSHEET.md) | 12 |
 | 44 | Continuous Delivery and Release Management | [Week 5 - DevOps, CI-CD and OpenShift/module-44/ACRONYM-CHEATSHEET.md](Week 5 - DevOps, CI-CD and OpenShift/module-44/ACRONYM-CHEATSHEET.md) | 10 |
 | 45 | Infrastructure as Code with Terraform and Ansible | [Week 5 - DevOps, CI-CD and OpenShift/module-45/ACRONYM-CHEATSHEET.md](Week 5 - DevOps, CI-CD and OpenShift/module-45/ACRONYM-CHEATSHEET.md) | 39 |

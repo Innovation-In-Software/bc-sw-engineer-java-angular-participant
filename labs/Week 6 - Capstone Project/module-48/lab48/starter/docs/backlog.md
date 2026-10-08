@@ -14,4 +14,4 @@
 - CAP-?? Angular list/detail for interactions — TODO
 - CAP-?? JWT login shell — TODO
 - CAP-?? Actions PR gate (Angular + Maven) — TODO
-- CAP-?? OpenShift smoke via Route — TODO
+- CAP-?? k3s smoke via Ingress — TODO

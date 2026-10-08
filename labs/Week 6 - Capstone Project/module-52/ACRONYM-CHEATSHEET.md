@@ -60,7 +60,7 @@ _Capstone / text module: terms taken from slide text and the module topic (few o
 | Term | Full form | Simple meaning |
 | --- | --- | --- |
 | **CI/CD** | Continuous Integration and Continuous Delivery | Automated build, test, and release pipeline (GitHub Actions in this course). |
-| **OpenShift** | — | Instructor-hosted cluster; demo ops use `oc` (not laptop k3s/`kubectl`). |
+| **k3s** | — | Instructor-hosted cluster; demo ops use `kubectl` (shared k3s (`kubectl`)). |
 | **SHA** | Secure Hash Algorithm (git commit SHA) | Part of Module 51's frozen release-identity block (tag, digest, pipeline run, git SHA) cited, never rebuilt, during the defense. |
 | **VPN** | Virtual Private Network | Named as a possible cause of a network timeout during the live SQL demo; a sanitized screenshot is pre-cached as fallback. |
 

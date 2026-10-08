@@ -24,7 +24,7 @@ Then **checkpoint E** → Lab 40.
 
 | Do now | Do not yet |
 | --- | --- |
-| Surfaces, SCA plan, triage CSV, SAST notes, gate questions | Docker (41) / OpenShift (42) / GitHub Actions (43) |
+| Surfaces, SCA plan, triage CSV, SAST notes, gate questions | Docker (41) / k3s (42) / GitHub Actions (43) |
 | Residual risk owner + expiry language | Silent suppressions / real PII in evidence |
 
 ## Workspace

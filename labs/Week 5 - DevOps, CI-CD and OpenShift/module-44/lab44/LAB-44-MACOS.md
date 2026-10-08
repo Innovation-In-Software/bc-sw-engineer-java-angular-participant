@@ -4,7 +4,7 @@
 **Primary IDE:** IntelliJ IDEA Community Edition  
 **Optional IDE:** VS Code  
 **Shell:** macOS Terminal (zsh)  
-**Stack hint:** JDK 21 · GitHub Actions CD · OpenShift `oc` · Lab 43 digest · IntelliJ  
+**Stack hint:** JDK 21 · GitHub Actions CD · k3s `kubectl` · Lab 43 digest · IntelliJ  
 **Full lab steps:** [LAB-44-GUIDE.md](LAB-44-GUIDE.md)  
 **Pre-lab exercises:** [`../exercises/EXERCISES-INDEX.md`](../exercises/EXERCISES-INDEX.md)  
 **Other OS:** [Windows guide](LAB-44-WINDOWS.md) · [IDE conventions](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/_IDE-CONVENTIONS.md)
@@ -36,10 +36,10 @@ cd examples/lab44-crm
 ```bash
 cd ~/java-bootcamp/examples/lab44-crm
 python3 -c "import json; json.load(open('artifact-manifest.json'))"
-grep -E 'workflow_dispatch|artifact_digest|oc set image' .github/workflows/cd.yml
+grep -E 'workflow_dispatch|artifact_digest|kubectl set image' .github/workflows/cd.yml
 ```
 
-No local OpenShift. Timed-path Pass is JSON + CD workflow lint + docs. Do **not** rebuild with `mvn package` on the deploy agent. Do **not** substitute k3s/`kubectl`. Live `oc` promote is homework on the instructor-hosted Project.
+Shared k3s. Timed-path Pass is JSON + CD workflow lint + docs. Do **not** rebuild with `mvn package` on the deploy agent. Use **k3s** and `kubectl`. Live `kubectl` promote is homework on the instructor-hosted Project.
 
 ## Do the lab
 

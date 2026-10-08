@@ -1,4 +1,4 @@
-# OpenShift runbook — Lab 42 (TODO)
+# k3s runbook — Lab 42 (TODO)
 
 ## Project
 - Name:
@@ -10,8 +10,8 @@
 
 ## Apply / verify
 ```bash
-oc project
-oc apply -f openshift/
+kubectl config view --minify
+kubectl apply -f k8s/
 oc get pods,svc,route
 ```
 

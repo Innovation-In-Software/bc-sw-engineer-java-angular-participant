@@ -22,6 +22,6 @@ jobs:
       - name: Deploy pinned digest
         run: |
           set -euo pipefail
-          # TODO: echo oc project / oc set image by digest — never rebuild the JAR here
-          echo "TODO: oc set image deployment/crm-api …@${{ inputs.artifact_digest }}"
+          # TODO: echo kubectl config view --minify / kubectl set image by digest — never rebuild the JAR here
+          echo "TODO: kubectl set image deployment/crm-api …@${{ inputs.artifact_digest }}"
       # TODO: non-prod smoke for CUS-1001 + lab-request-001

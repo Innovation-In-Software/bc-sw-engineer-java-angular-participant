@@ -64,11 +64,11 @@ Labs and exercises are **practice only**. Nothing is submitted or graded. Do not
 
 | # | Deliverable |
 | - | ----------- |
-| 1 | `docs/architecture.md` + diagrams (Angular → REST → Spring Boot → PostgreSQL; Kafka; OpenShift) |
+| 1 | `docs/architecture.md` + diagrams (Angular → REST → Spring Boot → PostgreSQL; Kafka; k3s) |
 | 2 | `docs/ai-usage-plan.md` (allowed uses, verification, forbidden) |
 | 3 | `docs/github-actions-plan.md` (PR/main/tag jobs, gates, artifacts) |
 | 4 | `docs/terraform-ansible-plan.md` (scope, state, idempotence, secrets) |
-| 5 | `docs/environment-strategy.md` (dev/test/stage/prod mapping to OpenShift) |
+| 5 | `docs/environment-strategy.md` (dev/test/stage/prod mapping to k3s) |
 | 6 | `docs/backlog.md` with CAP-style stories (at least CAP-12 seed for Lab 49) |
 | 7 | No secrets, real customer data, or Bitbucket/Oracle/React/SOAP as taught path |
 
@@ -87,12 +87,12 @@ After completing this lab, you will be able to:
 * Document the mandatory fullstack data and control paths
 * Plan GitHub Actions quality gates before writing workflow YAML in Lab 51
 * Bound Terraform/Ansible scope and secret handling
-* Define environment promotion and OpenShift Project strategy
+* Define environment promotion and k3s namespace strategy
 * Seed an acceptance-backed backlog for implementation labs
 
 ## Business Scenario
 
-Leadership freezes: **No Lab 49+ merge without a reviewed architecture and delivery plan.** Your plan must name **Angular**, **REST**, **Spring Boot**, **PostgreSQL**, **Kafka**, **Docker**, **OpenShift**, **GitHub Actions**, and **Terraform/Ansible**—not Bitbucket, Oracle, React, or SOAP.
+Leadership freezes: **No Lab 49+ merge without a reviewed architecture and delivery plan.** Your plan must name **Angular**, **REST**, **Spring Boot**, **PostgreSQL**, **Kafka**, **Docker**, **k3s**, **GitHub Actions**, and **Terraform/Ansible**—not Bitbucket, Oracle, React, or SOAP.
 
 | ID | Name | Notes |
 | -- | ---- | ----- |
@@ -112,7 +112,7 @@ flowchart LR
   API --> PG["PostgreSQL"]
   API <--> K["Kafka"]
   GH["GitHub"] --> GHA["Actions<br/>security / test / build"]
-  GHA --> OS["OpenShift Deploy"]
+  GHA --> OS["k3s Deploy"]
 ```
 
 ## Prerequisites
@@ -136,7 +136,7 @@ mkdir -p ~/java-bootcamp/examples/lab48-capstone-plan/docs
 **Acceptance:** 201 + row + event with correlation lab-request-001; 404 for CUS-9999.
 ```
 
-**What to notice:** Acceptance criteria drive Labs 49–50; CI/CD and OpenShift come later—but must be planned now.
+**What to notice:** Acceptance criteria drive Labs 49–50; CI/CD and k3s come later—but must be planned now.
 
 ---
 
@@ -150,7 +150,7 @@ Commands assume `~/java-bootcamp/examples/lab48-capstone-plan`.
 
 **Why:** Ambiguous stack choices leak Oracle/React/Bitbucket into diagrams and fail review.
 
-**Do this:** In `docs/architecture.md`, list components and non-goals. Write 2–3 short ADRs (e.g. PostgreSQL over alternatives; GitHub Actions over other CI; OpenShift Routes for SPA/API exposure). Explicitly reject Bitbucket Pipelines, Oracle, React, and SOAP as taught paths.
+**Do this:** In `docs/architecture.md`, list components and non-goals. Write 2–3 short ADRs (e.g. PostgreSQL over alternatives; GitHub Actions over other CI; Traefik Ingress for SPA/API exposure). Explicitly reject Bitbucket Pipelines, Oracle, React, and SOAP as taught paths.
 
 **Expected result:** Stack table + ADRs a peer can audit in five minutes.
 
@@ -186,11 +186,11 @@ Commands assume `~/java-bootcamp/examples/lab48-capstone-plan`.
 
 **Why:** Lab 51 implements gates you invent here.
 
-**Do this:** In `docs/github-actions-plan.md`, specify PR vs `main` vs tag behavior: Angular `npm ci` / `ng test` / `ng build`, Maven verify, SAST/dependency scan, container build/scan, artifact identity, OpenShift deploy job ownership, environments/approvals. Reference Lab 43 patterns; note Angular frontend build is in fullstack scope.
+**Do this:** In `docs/github-actions-plan.md`, specify PR vs `main` vs tag behavior: Angular `npm ci` / `ng test` / `ng build`, Maven verify, SAST/dependency scan, container build/scan, artifact identity, k3s deploy job ownership, environments/approvals. Reference Lab 43 patterns; note Angular frontend build is in fullstack scope.
 
 **Expected result:** Job/gate table with owners and evidence artifacts.
 
-**If it fails:** Deploy rebuilds JAR inside OpenShift job → require package-once / digest promote.
+**If it fails:** Deploy rebuilds JAR inside k3s job → require package-once / digest promote.
 
 ---
 
@@ -198,7 +198,7 @@ Commands assume `~/java-bootcamp/examples/lab48-capstone-plan`.
 
 **Why:** IaC without env boundaries creates accidental prod blast radius.
 
-**Do this:** Write `docs/terraform-ansible-plan.md` (providers, remote state, no secrets in Git, Ansible idempotence) and `docs/environment-strategy.md` (dev/test/stage/prod ↔ OpenShift Projects, config promotion, approval gates). Align names with Labs 42/44/45.
+**Do this:** Write `docs/terraform-ansible-plan.md` (providers, remote state, no secrets in Git, Ansible idempotence) and `docs/environment-strategy.md` (dev/test/stage/prod ↔ k3s namespaces, config promotion, approval gates). Align names with Labs 42/44/45.
 
 **Expected result:** Clear non-prod vs prod rules; state backend described without credentials.
 
@@ -210,7 +210,7 @@ Commands assume `~/java-bootcamp/examples/lab48-capstone-plan`.
 
 **Why:** Lab 49 needs CAP-12 (or equivalent) acceptance frozen.
 
-**Do this:** Create `docs/backlog.md` with CAP-12 plus 4–6 related stories (Angular list/detail, JWT login shell, Flyway interaction table, Actions PR gate, OpenShift smoke). Peer-review diagrams for stack accuracy. Capture review notes.
+**Do this:** Create `docs/backlog.md` with CAP-12 plus 4–6 related stories (Angular list/detail, JWT login shell, Flyway interaction table, Actions PR gate, k3s smoke). Peer-review diagrams for stack accuracy. Capture review notes.
 
 **Expected result:** Backlog ready for Lab 49; peer sign-off recorded.
 
@@ -222,7 +222,7 @@ Commands assume `~/java-bootcamp/examples/lab48-capstone-plan`.
 
 | # | Confirm | Self-check |
 | - | ------- | ---------- |
-| 1 | Architecture uses Angular · REST · Spring Boot · PostgreSQL · Kafka · OpenShift · Actions | Pass / Fail |
+| 1 | Architecture uses Angular · REST · Spring Boot · PostgreSQL · Kafka · k3s · Actions | Pass / Fail |
 | 2 | AI usage plan with verification + forbids | Pass / Fail |
 | 3 | GitHub Actions plan includes Angular + Java gates | Pass / Fail |
 | 4 | Terraform/Ansible + environment strategy present | Pass / Fail |
@@ -246,7 +246,7 @@ Commands assume `~/java-bootcamp/examples/lab48-capstone-plan`.
 Angular SPA → REST (JWT) → Spring Boot → PostgreSQL
 Spring Boot ↔ Kafka (versioned events)
 ## Delivery path
-GitHub → Actions (SAST, test, build) → image digest → OpenShift
+GitHub → Actions (SAST, test, build) → image digest → k3s
 ## Non-goals
 Bitbucket Pipelines, Oracle DB, React UI, SOAP services
 ```
@@ -265,7 +265,7 @@ Bitbucket Pipelines, Oracle DB, React UI, SOAP services
 | ------- | ------------ | --- |
 | Scope explosion | No non-goals | Tighten ADRs |
 | Lab 49 blocked | Missing CAP-12 | Finish backlog |
-| Ops rejects plan | No OpenShift envs | Complete env strategy |
+| Ops rejects plan | No k3s envs | Complete env strategy |
 
 ## Cleanup
 

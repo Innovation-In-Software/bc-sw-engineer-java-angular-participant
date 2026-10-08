@@ -11,7 +11,7 @@
 ## Procedure (sketch)
 
 1. Announce incident / change freeze as needed (Lab 47 templates).
-2. Redeploy known-good digest (`oc set image` / CD job — per instructor; not k3s/`kubectl`).
+2. Redeploy known-good digest (`kubectl set image` / CD job — per instructor; k3s (`kubectl`)).
 3. TODO(lab44): Exact commands for your environment.
 4. Verify readiness + CRM smoke.
 5. Record outcome in release notes (no secrets).

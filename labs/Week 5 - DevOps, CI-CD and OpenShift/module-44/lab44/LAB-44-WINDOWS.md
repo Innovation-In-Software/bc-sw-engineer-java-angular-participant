@@ -4,7 +4,7 @@
 **Primary IDE:** IntelliJ IDEA Community Edition  
 **Optional IDE:** VS Code  
 **Shell:** Windows PowerShell  
-**Stack hint:** JDK 21 · GitHub Actions CD · OpenShift `oc` · Lab 43 digest · IntelliJ  
+**Stack hint:** JDK 21 · GitHub Actions CD · k3s `kubectl` · Lab 43 digest · IntelliJ  
 **Full lab steps:** [LAB-44-GUIDE.md](LAB-44-GUIDE.md)  
 **Pre-lab exercises:** [`../exercises/EXERCISES-INDEX.md`](../exercises/EXERCISES-INDEX.md)  
 **Other OS:** [macOS guide](LAB-44-MACOS.md) · [IDE conventions](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/_IDE-CONVENTIONS.md)
@@ -36,10 +36,10 @@ cd examples\lab44-crm
 ```powershell
 cd $env:USERPROFILE\java-bootcamp\examples\lab44-crm
 Get-Content artifact-manifest.json | ConvertFrom-Json | Out-Null
-Select-String -Path .github\workflows\cd.yml -Pattern 'workflow_dispatch|artifact_digest|oc set image'
+Select-String -Path .github\workflows\cd.yml -Pattern 'workflow_dispatch|artifact_digest|kubectl set image'
 ```
 
-Verified on this laptop (2026-08-28): **no local OpenShift** (course rule — instructor-hosted Project). `oc` is not on PATH. Timed-path Pass is JSON + CD workflow lint + docs. Live `oc set image` / Route smoke is homework on the shared cluster. Do **not** rebuild with `mvn package` on the deploy agent. Do **not** substitute k3s/k3d/Ingress/`kubectl`.
+Verified on this laptop (2026-08-28): **shared k3s** (course rule — instructor-hosted Project). `kubectl` is not on PATH. Timed-path Pass is JSON + CD workflow lint + docs. Live `kubectl set image` / Ingress smoke is homework on the shared cluster. Do **not** rebuild with `mvn package` on the deploy agent. Use the shared **k3s** cluster with `kubectl` and Traefik Ingress.
 
 Lab 43 JAR SHA-256 used in the answer-key manifest: `4B2E02E7E59C5A1648240A2C7672B2BE7E9177F338F6B2FD2A8E41168A8804DD`.
 

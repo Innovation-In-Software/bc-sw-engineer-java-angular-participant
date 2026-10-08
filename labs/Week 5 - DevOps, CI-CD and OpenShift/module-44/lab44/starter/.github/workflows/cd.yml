@@ -29,7 +29,7 @@ jobs:
           # TODO(lab44): Compare against artifact-manifest.json
       - name: Deploy (sketch)
         run: |
-          echo "TODO(lab44): oc set image deployment/crm-api …@digest (OpenShift; not k3s/kubectl/Ingress)"
+          echo "TODO(lab44): kubectl set image deployment/crm-api …@digest (k3s; not k3s/kubectl/Ingress)"
           # Never echo secrets or kubeconfig contents
           # Never mvn package here — promote Lab 43 identity only
       - name: Smoke (non-prod)

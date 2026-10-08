@@ -52,7 +52,7 @@ cd backend; mvn -B test
 cd ..\frontend; npx ng build
 ```
 
-`ng` is not required on PATH — use `npx ng`. Angular UI is Lab 50; OpenShift deploy is Lab 51.
+`ng` is not required on PATH — use `npx ng`. Angular UI is Lab 50; k3s deploy is Lab 51.
 
 Evidence under `notes/lab-50/`.
 

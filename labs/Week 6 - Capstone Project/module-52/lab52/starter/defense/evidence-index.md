@@ -11,7 +11,7 @@ Every slide claim must point here. Paths relative to `lab52-capstone/` (or your 
 | UI→PostgreSQL | Lab 50 `docs/frontend-persistence-demo.md` | 50 | Y/N |
 | Flyway | Lab 50 `V1__crm_schema.sql` | 50 | Y/N |
 | Pipeline / digest | Lab 51 `docs/capstone-cicd-runbook.md` | 51 | Y/N |
-| Rollback | Lab 51 runbook / `oc rollout undo` | 51 | Y/N |
+| Rollback | Lab 51 runbook / `kubectl rollout undo` | 51 | Y/N |
 | Deny 401/404 | notes/lab-50 or lab-51 | 50–51 | Y/N |
 
 ## TODO

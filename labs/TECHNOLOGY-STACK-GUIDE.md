@@ -11,7 +11,7 @@ Week 1   Java + JVM                       Write and understand core code
 Week 2   Maven + REST + Tests             Structure, integrate, verify
 Week 3   Spring Boot + REST MVC           Enterprise backend
 Week 4   Kafka + Angular + PostgreSQL     Full-stack, event-driven, persistent
-Week 5   DevOps + Actions + OpenShift     Secure, containerise, deploy
+Week 5   DevOps + Actions + k3s     Secure, containerise, deploy
 Week 6   Capstone                         Deliver a production-style CRM
 ```
 
@@ -27,7 +27,7 @@ Week 6   Capstone                         Deliver a production-style CRM
 | Messaging | Apache Kafka, Spring Kafka, Resilience4j |
 | Database | **PostgreSQL** |
 | Containers | Docker images, GHCR |
-| Orchestration | **OpenShift** (Projects, Routes, `oc`) |
+| Orchestration | **k3s** (Projects, Routes, `kubectl`) |
 | CI/CD | **GitHub Actions** + code scanning |
 | IaC | Ansible, Terraform |
 | Tests | JUnit, Mockito, Selenium (Angular UI) |
@@ -41,7 +41,7 @@ Week 6   Capstone                         Deliver a production-style CRM
 | OpenAPI | OpenAPI Specification | Lab 13 |
 | JWT | JSON Web Token | Labs 28, 36 |
 | JPA | Jakarta Persistence API | Lab 39 |
-| CLI | Command-Line Interface (`ng`, `oc`) | Labs 33, 42 |
+| CLI | Command-Line Interface (`ng`, `kubectl`) | Labs 33, 42 |
 | SAST / DAST | Static / Dynamic Application Security Testing | Labs 40, 51 |
 | GHCR | GitHub Container Registry | Labs 41, 43, 51 |
 | IaC | Infrastructure as Code | Lab 45 |

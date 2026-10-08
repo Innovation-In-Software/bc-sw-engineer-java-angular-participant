@@ -193,7 +193,7 @@ docker version
 
 **Expected:** Both a **Client** and a **Server** section print.
 
-**If it fails:** reopen Terminal after install; start Docker from Applications and wait for the engine; you need admin for the first launch. Docker Engine without Desktop is acceptable if `docker version` shows Server. Do not install OpenShift Local / CRC as a substitute.
+**If it fails:** reopen Terminal after install; start Docker from Applications and wait for the engine; you need admin for the first launch. Docker Engine without Desktop is acceptable if `docker version` shows Server. Do not install a local k3s or k3d cluster as a substitute.
 
 Do **not** start Lab 1 until rows 1–8 below are Pass. Complete this step before Week 4.
 

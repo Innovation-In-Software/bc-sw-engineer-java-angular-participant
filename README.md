@@ -2,9 +2,9 @@
 
 Participant materials for the six-week **Java & Angular Fullstack** bootcamp from [Innovation In Software](https://github.com/Innovation-In-Software).
 
-Build job-ready full-stack skills: Java and the JVM, Spring Boot REST APIs, Angular, PostgreSQL, Kafka, OpenShift, and GitHub Actions, then ship a production-style capstone.
+Build job-ready full-stack skills: Java and the JVM, Spring Boot REST APIs, Angular, PostgreSQL, Kafka, k3s, and GitHub Actions, then ship a production-style capstone.
 
-**Stack:** Java 21 · Spring Boot REST · Angular · PostgreSQL · Kafka · OpenShift · GitHub Actions
+**Stack:** Java 21 · Spring Boot REST · Angular · PostgreSQL · Kafka · k3s · GitHub Actions
 
 ```bash
 git clone https://github.com/Innovation-In-Software/bc-sw-engineer-java-angular.git
@@ -72,11 +72,11 @@ Open the **Lab N** link for that module’s full guide. In class, use the `start
 - [Lab 38 — SQL and Query Performance with PostgreSQL — Northstar CRM Tuning](labs/Week%204%20-%20Kafka,%20Angular,%20Oracle%20and%20Resilience/module-38/lab38/LAB-38-GUIDE.md)
 - [Lab 39 — Spring Data JPA and PostgreSQL Integration — Northstar CRM Persistence](labs/Week%204%20-%20Kafka,%20Angular,%20Oracle%20and%20Resilience/module-39/lab39/LAB-39-GUIDE.md)
 
-## Week 5 — DevOps, CI/CD and OpenShift
+## Week 5 — DevOps, CI/CD and k3s
 
 - [Lab 40 — Application Security Testing for the CRM — Dependency-Check, SAST, Remediation](labs/Week%205%20-%20DevOps,%20CI-CD%20and%20OpenShift/module-40/lab40/LAB-40-GUIDE.md)
 - [Lab 41 — Containerize the Spring Boot CRM — Multi-Stage Dockerfile, Non-Root, Health](labs/Week%205%20-%20DevOps,%20CI-CD%20and%20OpenShift/module-41/lab41/LAB-41-GUIDE.md)
-- [Lab 42 — Kubernetes and OpenShift Architecture — Northstar CRM on OpenShift](labs/Week%205%20-%20DevOps,%20CI-CD%20and%20OpenShift/module-42/lab42/LAB-42-GUIDE.md)
+- [Lab 42 — Kubernetes and k3s Architecture — Northstar CRM on k3s](labs/Week%205%20-%20DevOps,%20CI-CD%20and%20OpenShift/module-42/lab42/LAB-42-GUIDE.md)
 - [Lab 43 — GitHub CI/CD Pipeline for the CRM — Northstar Delivery Gates](labs/Week%205%20-%20DevOps,%20CI-CD%20and%20OpenShift/module-43/lab43/LAB-43-GUIDE.md)
 - [Lab 44 — Continuous Delivery and Environment Promotion — Northstar Release Path](labs/Week%205%20-%20DevOps,%20CI-CD%20and%20OpenShift/module-44/lab44/LAB-44-GUIDE.md)
 - [Lab 45 — Infrastructure as Code with AI Assistance — Northstar CRM Stack Sketches](labs/Week%205%20-%20DevOps,%20CI-CD%20and%20OpenShift/module-45/lab45/LAB-45-GUIDE.md)
@@ -88,7 +88,7 @@ Open the **Lab N** link for that module’s full guide. In class, use the `start
 - [Lab 48 — Capstone Architecture and Planning — Northstar CRM Delivery Blueprint](labs/Week%206%20-%20Capstone%20Project/module-48/lab48/LAB-48-GUIDE.md)
 - [Lab 49 — Capstone Backend and Messaging — Northstar CRM Interaction Slice](labs/Week%206%20-%20Capstone%20Project/module-49/lab49/LAB-49-GUIDE.md)
 - [Lab 50 — Capstone Build — Angular Frontend and PostgreSQL Persistence](labs/Week%206%20-%20Capstone%20Project/module-50/lab50/LAB-50-GUIDE.md)
-- [Lab 51 — Capstone Security, CI/CD and Deployment — GitHub Actions to OpenShift](labs/Week%206%20-%20Capstone%20Project/module-51/lab51/LAB-51-GUIDE.md)
+- [Lab 51 — Capstone Security, CI/CD and Deployment — GitHub Actions to k3s](labs/Week%206%20-%20Capstone%20Project/module-51/lab51/LAB-51-GUIDE.md)
 - [Lab 52 — Capstone Final Defense — Northstar CRM Presentation and Technical Defense](labs/Week%206%20-%20Capstone%20Project/module-52/lab52/LAB-52-GUIDE.md)
 
 © 2026 Innovation In Software Corporation

@@ -22,4 +22,4 @@ Full course rule: [Which file do I open?](../../_PARTICIPANT-FILE-GUIDE.md) · [
 
 **Critical:** UI automation targets **Angular** (`data-testid`, explicit waits). Test database strategy is **PostgreSQL** (Testcontainers or dedicated test DB) — not Oracle. CI path is **GitHub Actions**, not Bitbucket. Fixtures: `CUS-1001` Amina Khan ACTIVE, `CUS-1002` Ravi Singh PROSPECT, correlation `lab-request-001`.
 
-**Stack wording for this module:** Angular · REST · PostgreSQL · OpenShift · GitHub Actions.
+**Stack wording for this module:** Angular · REST · PostgreSQL · k3s · GitHub Actions.

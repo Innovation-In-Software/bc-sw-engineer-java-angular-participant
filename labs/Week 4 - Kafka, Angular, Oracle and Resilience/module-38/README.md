@@ -20,4 +20,4 @@ Full course rule: [Which file do I open?](../../_PARTICIPANT-FILE-GUIDE.md) · [
 
 **Critical:** Lab 37 schema first. Use PostgreSQL **`EXPLAIN` / `EXPLAIN ANALYZE`** (not Oracle plan tools). Joins, CTEs, aggregations, index selectivity, avoid `SELECT *`, N+1 awareness, OFFSET vs keyset. Lab project: `examples/lab38-crm/`.
 
-**Stack for this course:** Angular · REST · **PostgreSQL** · Spring Data JPA (Lab 39) · OpenShift · GitHub Actions
+**Stack for this course:** Angular · REST · **PostgreSQL** · Spring Data JPA (Lab 39) · k3s · GitHub Actions

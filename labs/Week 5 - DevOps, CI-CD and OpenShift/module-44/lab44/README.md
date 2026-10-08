@@ -9,6 +9,6 @@
 | [LAB-44-MACOS.md](LAB-44-MACOS.md) | macOS how-to |
 | [starter/README.md](starter/README.md) | Timed path (~45 min) |
 
-**Stack:** GitHub Actions CD · promote Lab 43 digest (no rebuild) · OpenShift `oc` / Route · synthetic `CUS-1001` smoke
+**Stack:** GitHub Actions CD · promote Lab 43 digest (no rebuild) · k3s `kubectl` / Route · synthetic `CUS-1001` smoke
 
 Module start: [`../README.md`](../README.md)

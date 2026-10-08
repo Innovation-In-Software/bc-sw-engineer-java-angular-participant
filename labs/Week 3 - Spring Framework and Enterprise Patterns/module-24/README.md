@@ -22,4 +22,4 @@ Full course rule: [Which file do I open?](../../_PARTICIPANT-FILE-GUIDE.md) · [
 
 **Critical:** Use **`@RestController` / Spring MVC** — not Spring-WS SOAP. In-memory persistence is fine here; PostgreSQL/JPA arrives in later labs. Document CORS for the **Angular** app on `http://localhost:4200`. Fixtures: `CUS-1001` Amina Khan ACTIVE, `CUS-1002` Ravi Singh PROSPECT, correlation `lab-request-001`.
 
-**Stack wording for this module:** Angular · REST · PostgreSQL · OpenShift · GitHub Actions.
+**Stack wording for this module:** Angular · REST · PostgreSQL · k3s · GitHub Actions.

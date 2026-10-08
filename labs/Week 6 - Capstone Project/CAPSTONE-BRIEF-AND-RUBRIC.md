@@ -27,7 +27,7 @@ The bootcamp prepares technology professionals for **enterprise Java + Angular f
 | Do they understand enterprise constraints? | Security, roles, correlation/traceability, rollback, residual-risk ownership, and AI governance are scored—not optional. |
 | Can they communicate under review? | Week ends with a formal stakeholder demo, technical defense, Q&A, and blameless retrospective. |
 
-**Bottom line:** Graduates leave Week 6 with portfolio-grade evidence of planning, implementation, quality, security, CI/CD, OpenShift deployment, and professional defense—aligned to how real teams release software.
+**Bottom line:** Graduates leave Week 6 with portfolio-grade evidence of planning, implementation, quality, security, CI/CD, k3s deployment, and professional defense—aligned to how real teams release software.
 
 ### Source confirmation (curriculum)
 
@@ -41,7 +41,7 @@ The bootcamp prepares technology professionals for **enterprise Java + Angular f
 | Formal presentation and technical defense | Confirmed |
 | Detailed scoring rubric (this document) | Confirmed for delivery use |
 
-Taught stack for this course (see [README.deck-production.md](../../README.deck-production.md)): **Angular · REST / OpenAPI · Spring Boot · PostgreSQL · Kafka · GitHub Actions · OpenShift**. The uploaded Angular outline still names Oracle in Module 50 and Bitbucket in Module 48; labs and this brief use **PostgreSQL** and **GitHub Actions**. React, SOAP, Oracle, Bitbucket Pipelines, and laptop k3s are not the taught path.
+Taught stack for this course (see [README.deck-production.md](../../README.deck-production.md)): **Angular · REST / OpenAPI · Spring Boot · PostgreSQL · Kafka · GitHub Actions · k3s**. The uploaded Angular outline still names Oracle in Module 50 and Bitbucket in Module 48; labs and this brief use **PostgreSQL** and **GitHub Actions**. React, SOAP, Oracle, Bitbucket Pipelines, and OpenShift are not the taught path. Deploy to the shared k3s cluster.
 
 ---
 
@@ -49,7 +49,7 @@ Taught stack for this course (see [README.deck-production.md](../../README.deck-
 
 ### 2.1 One-paragraph description
 
-Service agents use an **Angular** application to search and manage customers and record interactions. A **Spring Boot REST** API enforces **JWT / role-based access control**, persists data in **PostgreSQL** via **Spring Data JPA**, and publishes **versioned Kafka** events for processing and audit. Delivery is proven through **GitHub Actions** (Java and Angular build, test, code scanning), **immutable Docker images**, **OpenShift** deployment, smoke tests, observability, and a documented **rollback** path. The week closes with a formal technical defense, retrospective, and an **AI-thread close-out**.
+Service agents use an **Angular** application to search and manage customers and record interactions. A **Spring Boot REST** API enforces **JWT / role-based access control**, persists data in **PostgreSQL** via **Spring Data JPA**, and publishes **versioned Kafka** events for processing and audit. Delivery is proven through **GitHub Actions** (Java and Angular build, test, code scanning), **immutable Docker images**, **k3s** deployment, smoke tests, observability, and a documented **rollback** path. The week closes with a formal technical defense, retrospective, and an **AI-thread close-out**.
 
 ### 2.2 Business scenario
 
@@ -85,10 +85,10 @@ Teams define **measurable** NFRs covering security, traceability, recoverability
 
 | Phase | Module | Lab | What participants produce |
 | ----- | ------ | --- | ------------------------- |
-| **Plan** | 48 | [Lab 48](module-48/lab48/LAB-48-GUIDE.md) | C4 context/containers, measurable NFRs, ADRs, prioritized backlog, risk register, AI usage plan, GitHub Actions / OpenShift delivery path |
+| **Plan** | 48 | [Lab 48](module-48/lab48/LAB-48-GUIDE.md) | C4 context/containers, measurable NFRs, ADRs, prioritized backlog, risk register, AI usage plan, GitHub Actions / k3s delivery path |
 | **Backend** | 49 | [Lab 49](module-49/lab49/LAB-49-GUIDE.md) | Spring Boot REST vertical slice, service/repository layers, Kafka producer/consumer, unit & integration tests |
 | **Full stack** | 50 | [Lab 50](module-50/lab50/LAB-50-GUIDE.md) | Angular agent journey + PostgreSQL/JPA end-to-end flow, HttpClient/interceptors, accessible UI, UI→DB verification |
-| **Release** | 51 | [Lab 51](module-51/lab51/LAB-51-GUIDE.md) | JWT/RBAC hardening, GitHub Actions gates (Java + Angular), Docker digests, OpenShift deploy, smoke + rollback |
+| **Release** | 51 | [Lab 51](module-51/lab51/LAB-51-GUIDE.md) | JWT/RBAC hardening, GitHub Actions gates (Java + Angular), Docker digests, k3s deploy, smoke + rollback |
 | **Defend** | 52 | [Lab 52](module-52/lab52/LAB-52-GUIDE.md) | Stakeholder demo, evidence-backed Q&A, architecture review, retrospective, individual reflection |
 | **AI Thread** | — | Integrated | Governance/security, where AI accelerated design/build/delivery, agentic tools in the team workflow |
 
@@ -106,7 +106,7 @@ Teams define **measurable** NFRs covering security, traceability, recoverability
 | Frontend | Angular (Node 22, Angular CLI), TypeScript, standalone components, Signals / RxJS, HttpClient, interceptors |
 | Persistence | PostgreSQL, Spring Data JPA, Flyway migrations |
 | Quality | JUnit, Mockito, integration tests, Selenium against Angular as assigned |
-| Delivery | Docker, OpenShift, GitHub Actions, GitHub code scanning / SAST |
+| Delivery | Docker, k3s, GitHub Actions, GitHub code scanning / SAST |
 | Infrastructure (as scoped) | Terraform and Ansible patterns with reviewed AI-assisted drafts |
 | Observability | Structured logging, Actuator health/metrics, correlation IDs |
 | AI | Copilot plus Week 6 AI Thread (governance, domain impact, agentic tools) |
@@ -128,7 +128,7 @@ flowchart TB
   subgraph Delivery["Delivery path"]
     Git["Git commit"] --> GHA["GitHub Actions<br/>Java + Angular, test, SAST"]
     GHA --> Img["Immutable Docker image"]
-    Img --> OCP["OpenShift deploy"]
+    Img --> OCP["k3s deploy"]
   end
 ```
 
@@ -136,7 +136,7 @@ flowchart TB
 ~/java-bootcamp/examples/customer-management-platform/
 ├── backend/      # Spring Boot REST API
 ├── frontend/     # Angular application
-├── openshift/    # OpenShift Deployments, Services, Routes
+├── k8s/    # k3s Deployments, Services, Routes
 ├── infra/        # Terraform / Ansible (as assigned)
 ├── docs/         # Architecture, NFRs, ADRs, backlog, risks, AI usage plan
 ├── defense/      # Final presentation packet
@@ -156,7 +156,7 @@ flowchart TB
 | ----- | ------------ |
 | Planning (48) | Architecture context/container docs, measurable NFRs, ADRs, prioritized backlog, risk register, AI usage plan |
 | Implementation (49–50) | Backend REST slice + Kafka, Angular journey + PostgreSQL persistence, automated tests, reproduction notes |
-| Release (51) | Security negatives, GitHub Actions + SAST evidence, image digest, OpenShift deploy evidence, smoke + rollback |
+| Release (51) | Security negatives, GitHub Actions + SAST evidence, image digest, k3s deploy evidence, smoke + rollback |
 | Defense (52) | Presentation, demo script, **evidence index**, Q&A notes, retrospective, reflection, self-score, AI-thread close-out |
 
 ### Evidence pack (reviewer checklist)
@@ -172,7 +172,7 @@ Teams prepare artifacts another engineer can use to understand, reproduce, and a
 - Unit, integration, UI, smoke, and security test results  
 - GitHub Actions pipeline run evidence  
 - Infrastructure automation evidence (as assigned)  
-- OpenShift deployment evidence  
+- k3s deployment evidence  
 - Final demo script / walkthrough notes  
 - Technical defense notes  
 - Team retrospective and individual reflection  
@@ -204,11 +204,11 @@ Used for sponsor-facing week assessment and Lab 52 self-reconciliation.
 
 | Category | Points | Full-credit indicators |
 | -------- | -----: | ---------------------- |
-| Architecture and planning | 15 | Roles, prioritized backlog, full-stack architecture (Angular / REST / PostgreSQL / Kafka / OpenShift), CI/CD plan, risks, AI usage plan |
+| Architecture and planning | 15 | Roles, prioritized backlog, full-stack architecture (Angular / REST / PostgreSQL / Kafka / k3s), CI/CD plan, risks, AI usage plan |
 | Backend and messaging | 20 | Working Spring Boot REST services, layered design, Kafka integration, review evidence, tests |
 | Frontend and persistence | 15 | Angular journey connected via HttpClient to APIs, PostgreSQL via Spring Data JPA, validated end-to-end flow |
 | Testing and quality | 15 | Unit, integration, Angular UI/smoke checks; repeatable validation; documented fixes or limitations |
-| Security, CI/CD, and deployment | 20 | SAST evidence, GitHub Actions execution, containers, OpenShift deploy, readiness / rollback |
+| Security, CI/CD, and deployment | 20 | SAST evidence, GitHub Actions execution, containers, k3s deploy, readiness / rollback |
 | Final defense and professionalism | 15 | Stakeholder demo, strong Q&A, design tradeoffs, evidence index, retrospective, reflection, AI-thread close-out |
 | **Total** | **100** | |
 
@@ -270,9 +270,9 @@ The Week 6 **AI Thread** is scored inside Architecture & Planning, Documentation
 ### 9.1 What sponsors may observe
 
 1. Working product walkthrough (search / profile / interaction) on synthetic data in Angular  
-2. Architecture story — Angular → REST → Spring Boot → PostgreSQL / Kafka / OpenShift  
+2. Architecture story — Angular → REST → Spring Boot → PostgreSQL / Kafka / k3s  
 3. Quality story — automated tests and failure-path evidence  
-4. Release story — GitHub Actions gates, image identity, OpenShift deploy, smoke, rollback  
+4. Release story — GitHub Actions gates, image identity, k3s deploy, smoke, rollback  
 5. Security story — authn/authz, Angular not the security boundary, scan triage honesty  
 6. Risk, AI, and learning story — residual risks, AI-thread close-out, retrospective, next steps  
 
@@ -289,7 +289,7 @@ _Mark each row **Pass** or **Fail** in your lab notes (GitHub markdown files are
 | 3 | Walk through backend, messaging, Angular frontend, and persistence flow | Pass / Fail |
 | 4 | Show automated test evidence | Pass / Fail |
 | 5 | Show security scan evidence | Pass / Fail |
-| 6 | Show GitHub Actions and OpenShift deployment evidence | Pass / Fail |
+| 6 | Show GitHub Actions and k3s deployment evidence | Pass / Fail |
 | 7 | Explain known risks, limitations, mitigations, and AI usage | Pass / Fail |
 | 8 | Answer technical Q&A with evidence | Pass / Fail |
 | 9 | Present team retrospective findings | Pass / Fail |
@@ -304,7 +304,7 @@ _Mark each row **Pass** or **Fail** in your lab notes (GitHub markdown files are
 | 1 | Architecture, NFRs, backlog, ADRs, risk register, and AI usage plan complete (Lab 48) | Pass / Fail |
 | 2 | Backend REST vertical slice with Kafka and tests (Lab 49) | Pass / Fail |
 | 3 | Angular + PostgreSQL end-to-end journey verified (Lab 50) | Pass / Fail |
-| 4 | Security, GitHub Actions, image digest, OpenShift deploy, smoke, and rollback evidenced (Lab 51) | Pass / Fail |
+| 4 | Security, GitHub Actions, image digest, k3s deploy, smoke, and rollback evidenced (Lab 51) | Pass / Fail |
 | 5 | Defense packet ready: presentation, demo script, evidence index, Q&A, retrospective, self-assessment, AI-thread close-out (Lab 52) | Pass / Fail |
 | 6 | No secrets or real customer data in submitted artifacts | Pass / Fail |
 | 7 | Known limitations listed with owners and next actions | Pass / Fail |
@@ -319,7 +319,7 @@ _Mark each row **Pass** or **Fail** in your lab notes (GitHub markdown files are
 | 2 | Backend, AI tools, and testing | Maven, REST APIs, testing mindset, observability basics |
 | 3 | Spring enterprise patterns | IoC, Boot, REST endpoints, security, transactions, validation |
 | 4 | Kafka, Angular, PostgreSQL, resilience | Messaging, Angular UI, persistence, fault tolerance |
-| 5 | DevOps, CI/CD, OpenShift | Containers, GitHub Actions, infrastructure, release communication |
+| 5 | DevOps, CI/CD, k3s | Containers, GitHub Actions, infrastructure, release communication |
 | **6** | **Enterprise capstone** | **Integrate Weeks 1–5 into one defendable delivery · AI Thread: AI in the Capstone** |
 
 ---
@@ -360,7 +360,7 @@ Confirm this single brief before Week 6 delivery (or at program kickoff).
 | ---- | ------ | ----- |
 | Product description (CRM platform) approved | ☐ Yes · ☐ Changes needed | |
 | Week 6 module flow (48–52 + AI Thread) approved | ☐ Yes · ☐ Changes needed | |
-| Technology stack approved (Angular / REST / PostgreSQL / GitHub Actions / OpenShift) | ☐ Yes · ☐ Changes needed | |
+| Technology stack approved (Angular / REST / PostgreSQL / GitHub Actions / k3s) | ☐ Yes · ☐ Changes needed | |
 | Overall 100-point week rubric (section 8.1) approved | ☐ Yes · ☐ Changes needed | |
 | Per-lab 100-point coaching rubric (section 8.2) approved | ☐ Yes · ☐ Changes needed | |
 | Evidence / success standard approved | ☐ Yes · ☐ Changes needed | |

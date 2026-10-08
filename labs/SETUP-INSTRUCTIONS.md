@@ -1,6 +1,6 @@
 # Setup instructions — Java & Angular Fullstack
 
-Verified baseline for this **new** course folder. Shared services are **PostgreSQL + Kafka + OpenShift**. CI/CD is **GitHub Actions**.
+Verified baseline for this **new** course folder. Shared services are **PostgreSQL + Kafka + k3s**. CI/CD is **GitHub Actions**.
 
 ## Weeks 0–3 (laptop only)
 
@@ -52,12 +52,12 @@ Needed for Week 4 `docker compose` (Labs 37–39) and Week 5 image builds (Labs 
 
 ```text
 docker version
-oc version
-oc whoami
-oc project
+kubectl version
+kubectl cluster-info
+kubectl config view --minify
 ```
 
-Docker Desktop or Engine is **required** (Labs 37–39 compose; Lab 41 image builds and capstone). Install in Lab 0 Step 11. Deploy path: **build image → push GHCR → `oc apply` (or `oc new-app`) into your OpenShift project**.
+Docker Desktop or Engine is **required** (Labs 37–39 compose; Lab 41 image builds and capstone). Install in Lab 0 Step 11. Deploy path: **build image → push GHCR → `kubectl apply` (or `kubectl apply`) into your k3s project**.
 
 GitHub Actions workflow lives in **your** `java-bootcamp` repo (`.github/workflows/`). Do not author `bitbucket-pipelines.yml`.
 
@@ -68,7 +68,7 @@ GitHub Actions workflow lives in **your** `java-bootcamp` repo (`.github/workflo
 | Spring Boot (typical) | 8080 |
 | Angular `ng serve` | 4200 |
 
-Shared PostgreSQL / Kafka / OpenShift ports are on the instructor host, not localhost.
+Shared PostgreSQL / Kafka / k3s ports are on the instructor host, not localhost.
 
 ## If it fails
 
@@ -77,6 +77,6 @@ Shared PostgreSQL / Kafka / OpenShift ports are on the instructor host, not loca
 | Wrong Java | `JAVA_HOME` and IntelliJ SDK both 21 |
 | `ng` not found | Node 22 on PATH; reopen the terminal |
 | PostgreSQL connection refused | allowlist / VPN; JDBC host from instructor sheet |
-| `oc` unauthorized | expired token; re-run `oc login` |
+| `kubectl` unauthorized | expired token; re-run `kubectl` |
 | `docker` not found / engine down | Follow Lab 0 Step 11; start Docker Desktop; `docker version` must show **Server** before Lab 37 / Lab 41 |
 | Actions not running | workflow in **your** repo, not the course clone |

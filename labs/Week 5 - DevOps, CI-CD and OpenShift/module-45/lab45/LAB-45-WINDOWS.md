@@ -4,7 +4,7 @@
 **Primary IDE:** IntelliJ IDEA Community Edition  
 **Optional IDE:** VS Code  
 **Shell:** Windows PowerShell  
-**Stack hint:** Terraform · Ansible syntax-check · OpenShift Project (instructor-hosted) · IntelliJ  
+**Stack hint:** Terraform · Ansible syntax-check · k3s namespace (instructor-hosted) · IntelliJ  
 **Full lab steps:** [LAB-45-GUIDE.md](LAB-45-GUIDE.md)  
 **Pre-lab exercises:** [`../exercises/EXERCISES-INDEX.md`](../exercises/EXERCISES-INDEX.md)  
 **Other OS:** [macOS guide](LAB-45-MACOS.md) · [IDE conventions](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/_IDE-CONVENTIONS.md)
@@ -41,7 +41,7 @@ terraform init -backend=false
 terraform validate
 ```
 
-Verified on this laptop (2026-08-28): Terraform **1.9.8** (`%USERPROFILE%\bin`; not on PATH by default). `init -backend=false` installed `hashicorp/null` **3.2.4**. **`terraform validate` → Success.** `validate` does not take `-var` (that flag is for `plan`/`apply`). `db_password` has no default on purpose. No cloud apply. Ansible syntax-check via Docker `cytopia/ansible` → `playbook: infra/ansible/site.yml`. Do **not** install OpenShift/CRC/k3s locally. Do **not** use `kubectl` as the lab path.
+Verified on this laptop (2026-08-28): Terraform **1.9.8** (`%USERPROFILE%\bin`; not on PATH by default). `init -backend=false` installed `hashicorp/null` **3.2.4**. **`terraform validate` → Success.** `validate` does not take `-var` (that flag is for `plan`/`apply`). `db_password` has no default on purpose. No cloud apply. Ansible syntax-check via Docker `cytopia/ansible` → `playbook: infra/ansible/site.yml`. Do **not** install a local cluster; use the shared k3s kubeconfig. Do **not** use `kubectl` as the lab path.
 
 ## Do the lab
 

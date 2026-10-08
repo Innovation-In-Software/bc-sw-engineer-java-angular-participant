@@ -14,4 +14,4 @@
 
 ## Production note
 
-Prefer OpenShift / gateway CORS policy over `*` with credentials. REST only — no SOAP endpoint path in this course.
+Prefer k3s / gateway CORS policy over `*` with credentials. REST only — no SOAP endpoint path in this course.

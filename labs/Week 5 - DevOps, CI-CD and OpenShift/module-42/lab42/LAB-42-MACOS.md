@@ -1,10 +1,10 @@
-# Lab 42: Kubernetes and OpenShift Architecture — macOS
+# Lab 42: Kubernetes and k3s Architecture — macOS
 
 **OS:** macOS  
 **Primary IDE:** IntelliJ IDEA Community Edition  
-**Optional IDE:** VS Code · OpenShift Console  
+**Optional IDE:** VS Code · k3s Console  
 **Shell:** macOS Terminal (zsh)  
-**Stack hint:** JDK 21 · Docker image from Lab 41 · `oc` CLI · OpenShift · GitHub Actions context · IntelliJ  
+**Stack hint:** JDK 21 · Docker image from Lab 41 · `kubectl` CLI · k3s · GitHub Actions context · IntelliJ  
 **Full lab steps:** [LAB-42-GUIDE.md](LAB-42-GUIDE.md)  
 **Pre-lab exercises:** [`../exercises/EXERCISES-INDEX.md`](../exercises/EXERCISES-INDEX.md)  
 **Other OS:** [Windows guide](LAB-42-WINDOWS.md) · [IDE conventions](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/_IDE-CONVENTIONS.md)
@@ -13,7 +13,7 @@
 
 - [Lab 0 (macOS)](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/module-00/lab0/LAB-0-MACOS.md) complete
 - Lab 41 image identity notes available
-- `oc` on PATH (or Console-only path approved by instructor)
+- `kubectl` on PATH (or Console-only path approved by instructor)
 - IntelliJ with **Project SDK 21**
 
 ## Paths (macOS)
@@ -32,11 +32,11 @@ cd examples/lab42-crm
 ### Commands this lab typically uses
 
 ```bash
-oc version
-oc login --server="$OPENSHIFT_API"
-oc project
-oc apply -f openshift/ --dry-run=client
-oc apply -f openshift/
+kubectl version
+kubectl --server="$KUBE_API"
+kubectl config view --minify
+kubectl apply -f k8s/ --dry-run=client
+kubectl apply -f k8s/
 oc get pods,svc,route
 curl -fsS "https://<route-host>/actuator/health/readiness"
 ```

@@ -7,7 +7,7 @@ Use these paths and commands in every Week 1 lab. Everything in Week 1 runs on y
 
 **Never used IntelliJ or GitHub?** Read the plain-language **[IntelliJ + GitHub — beginner guide](../INTELLIJ-AND-GITHUB-BEGINNER-README.md)** first (open project → run Java → commit → push), then use this page as the Week 1 path/command cheat sheet.
 
-Cohort shared services (**PostgreSQL**, Kafka, OpenShift) are documented in [`../FINAL-SETUP-README.md`](../FINAL-SETUP-README.md) and are **not required until Week 4+**. CI/CD later in the course is **GitHub Actions**.
+Cohort shared services (**PostgreSQL**, Kafka, k3s) are documented in [`../FINAL-SETUP-README.md`](../FINAL-SETUP-README.md) and are **not required until Week 4+**. CI/CD later in the course is **GitHub Actions**.
 
 ## Workspace
 

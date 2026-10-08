@@ -9,6 +9,6 @@
 | [LAB-45-MACOS.md](LAB-45-MACOS.md) | macOS how-to |
 | [starter/README.md](starter/README.md) | Timed path (~45 min) |
 
-**Stack:** Terraform (`null_resource` sketch, no cloud apply) · Ansible syntax-check · OpenShift Project as runtime (not local k3s) · AI review record
+**Stack:** Terraform (`null_resource` sketch, no cloud apply) · Ansible syntax-check · k3s namespace as runtime (the shared k3s cluster) · AI review record
 
 Module start: [`../README.md`](../README.md)

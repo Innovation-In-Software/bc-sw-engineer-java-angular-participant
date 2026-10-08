@@ -1,6 +1,6 @@
 # WEEK 6 — ENTERPRISE CAPSTONE DOCUMENT
 
-> **Java & Angular Fullstack.** Labs **48–52** cover Angular + REST + **PostgreSQL** + OpenShift + GitHub Actions. Company-shareable brief/rubric: [Java_Angular_Fullstack_Capstone.docx](Java_Angular_Fullstack_Capstone.docx) · [Java_Angular_Fullstack_Capstone_Rubric.docx](Java_Angular_Fullstack_Capstone_Rubric.docx).
+> **Java & Angular Fullstack.** Labs **48–52** cover Angular + REST + **PostgreSQL** + k3s + GitHub Actions. Company-shareable brief/rubric: [Java_Angular_Fullstack_Capstone.docx](Java_Angular_Fullstack_Capstone.docx) · [Java_Angular_Fullstack_Capstone_Rubric.docx](Java_Angular_Fullstack_Capstone_Rubric.docx).
 
 **Clone handouts · commit in your own repo:** [CLONE-AND-OWN-REPO-GUIDE.md](../CLONE-AND-OWN-REPO-GUIDE.md)
 
@@ -45,7 +45,7 @@ This document is the **capstone master document** for Modules 48–52 and Labs 4
 | Plan | 48 | [Lab 48](module-48/lab48/LAB-48-GUIDE.md) | Architecture, NFRs, backlog, ADRs, risk register |
 | Backend | 49 | [Lab 49](module-49/lab49/LAB-49-GUIDE.md) | Spring Boot APIs, Kafka events, tests |
 | Full stack | 50 | [Lab 50](module-50/lab50/LAB-50-GUIDE.md) | Angular UI + PostgreSQL/JPA end-to-end journey |
-| Release | 51 | [Lab 51](module-51/lab51/LAB-51-GUIDE.md) | Security, GitHub Actions, containers, OpenShift deploy |
+| Release | 51 | [Lab 51](module-51/lab51/LAB-51-GUIDE.md) | Security, GitHub Actions, containers, k3s deploy |
 | Defend | 52 | [Lab 52](module-52/lab52/LAB-52-GUIDE.md) | Live demo, Q&A, retrospective, completion check |
 
 ### Pre-lab exercises (Modules 48–52)
@@ -69,7 +69,7 @@ By the end of Week 6, students should be able to:
 - Design and document an enterprise architecture with measurable NFRs and ADRs
 - Deliver a vertical backend slice with validated APIs, transactions, and Kafka events
 - Complete a usable Angular journey backed by Spring Data JPA and PostgreSQL
-- Apply JWT/RBAC, SAST gates, immutable images, and safe OpenShift deployment
+- Apply JWT/RBAC, SAST gates, immutable images, and safe k3s deployment
 - Present and defend the solution with reproducible evidence
 - Run a blameless retrospective and confirm completion with evidence
 
@@ -112,7 +112,7 @@ flowchart TB
   subgraph Delivery["Delivery path"]
     Git["Git commit"] --> GHA["GitHub Actions<br/>build, test, SAST"]
     GHA --> Img["Immutable Docker image"]
-    Img --> OCP["OpenShift deploy"]
+    Img --> OCP["k3s deploy"]
   end
 ```
 
@@ -124,7 +124,7 @@ Adapt to the existing CRM project; do not reorganize unrelated modules:
 ~/java-bootcamp/examples/customer-management-platform/
 ├── backend/               # Spring Boot API
 ├── frontend/              # Angular application
-├── openshift/             # OpenShift Deployments, Services, Routes
+├── k8s/             # k3s Deployments, Services, Routes
 ├── infra/                 # Terraform and Ansible (as assigned)
 ├── docs/                  # ADRs, architecture, NFRs, backlog, risks
 ├── defense/               # Lab 52 presentation packet
@@ -149,7 +149,7 @@ Capstone expects the full stack from Weeks 1–5:
 | Backend | Spring Boot + Kafka |
 | Frontend | Angular (Node 22 + Angular CLI) |
 | Data | PostgreSQL + Spring Data JPA |
-| Delivery | Docker images + OpenShift deploy path |
+| Delivery | Docker images + k3s deploy path |
 | CI | GitHub Actions with SAST gates |
 
 Pre-flight (adapt as instructed):
@@ -288,7 +288,7 @@ Feature-complete is not release-ready. Access control, delivery automation, imag
 - JWT resource server, deny-by-default authorization, negative tests
 - GitHub Actions with Maven + Angular build/test and SAST gates
 - Immutable container images (digest identity)
-- OpenShift deploy, smoke tests, observability, rollback
+- k3s deploy, smoke tests, observability, rollback
 
 ### Lab outcomes and artifacts
 
@@ -297,12 +297,12 @@ Feature-complete is not release-ready. Access control, delivery automation, imag
 | Spring Security changes and tests | Protected endpoints |
 | Pipeline definition | Gated delivery (Java + Angular) |
 | Dockerfile and image digest | Immutable promotion identity |
-| OpenShift manifests | Cluster release |
+| k3s manifests | Cluster release |
 | Security and deployment evidence | Sanitized proof packet |
 
 ### Module narrative (slides)
 
-Threat model → secure endpoints → SAST/DAST → Docker → GitHub Actions → OpenShift → smoke/rollback → lab  
+Threat model → secure endpoints → SAST/DAST → Docker → GitHub Actions → k3s → smoke/rollback → lab  
 See [slides_outline.md](../../curriculum/Week%206%20-%20Capstone%20Project/slides_outline.md) (slides ~89–119) and [Module 51 slide text](../../curriculum/Week%206%20-%20Capstone%20Project/module-51/SLIDE-TEXT-README.md).
 
 ---
@@ -427,7 +427,7 @@ Adapt to cohort size; every member should touch implementation and evidence.
 | Backend / messaging | Spring Boot APIs, Kafka, tests |
 | Frontend / UX | Angular journey, accessibility, UI verification |
 | Data / persistence | PostgreSQL schema, migrations, JPA |
-| Security / delivery | JWT, pipeline gates, images, OpenShift |
+| Security / delivery | JWT, pipeline gates, images, k3s |
 | Demo / defense coordinator | Script, evidence index, rehearsal, retrospective |
 
 ---

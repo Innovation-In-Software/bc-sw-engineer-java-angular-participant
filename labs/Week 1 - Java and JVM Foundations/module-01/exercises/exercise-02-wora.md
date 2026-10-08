@@ -21,7 +21,7 @@
 - Why the same `.class` can run on Windows/macOS/Linux without recompile
 - How to spot the common mistake `java Hello.java`
 
-**Enterprise context:** CI builds a JAR once; OpenShift/Kubernetes pods pull the same image across nodes. WORA is why “it compiled on my laptop” still fails only when the **runtime** (JDK version / flags) differs — not because the OS needs a new compile of your source.
+**Enterprise context:** CI builds a JAR once; k3s/Kubernetes pods pull the same image across nodes. WORA is why “it compiled on my laptop” still fails only when the **runtime** (JDK version / flags) differs — not because the OS needs a new compile of your source.
 
 ## Easy idea (WORA)
 

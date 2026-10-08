@@ -2,7 +2,7 @@
 
 ## Stack
 
-Angular + Spring Boot + PostgreSQL + GitHub Actions → OpenShift (`oc`).  
+Angular + Spring Boot + PostgreSQL + GitHub Actions → k3s (`kubectl`).  
 Not Bitbucket. Not k3s/`kubectl`.
 
 ## Secret names only
@@ -19,12 +19,12 @@ Never paste cluster credentials into this file.
 
 ## Promote
 
-Digest from CI → `oc set image` — TODO env names (`crm-test` / `crm-staging` / `crm-prod`)
+Digest from CI → `kubectl set image` — TODO env names (`crm-test` / `crm-staging` / `crm-prod`)
 
 ## Smoke
 
-`CUS-1001` via Route + `lab-request-001` — TODO
+`CUS-1001` via Ingress + `lab-request-001` — TODO
 
 ## Rollback
 
-`oc rollout undo` — TODO
+`kubectl rollout undo` — TODO

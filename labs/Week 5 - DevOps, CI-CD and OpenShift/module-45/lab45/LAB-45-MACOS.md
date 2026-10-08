@@ -4,7 +4,7 @@
 **Primary IDE:** IntelliJ IDEA Community Edition  
 **Optional IDE:** VS Code  
 **Shell:** macOS Terminal (zsh)  
-**Stack hint:** Terraform · Ansible syntax-check · OpenShift Project (instructor-hosted) · IntelliJ  
+**Stack hint:** Terraform · Ansible syntax-check · k3s namespace (instructor-hosted) · IntelliJ  
 **Full lab steps:** [LAB-45-GUIDE.md](LAB-45-GUIDE.md)  
 **Pre-lab exercises:** [`../exercises/EXERCISES-INDEX.md`](../exercises/EXERCISES-INDEX.md)  
 **Other OS:** [Windows guide](LAB-45-WINDOWS.md) · [IDE conventions](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/_IDE-CONVENTIONS.md)
@@ -42,7 +42,7 @@ cd ../..
 ansible-playbook --syntax-check -i inventory.example.yml infra/ansible/site.yml
 ```
 
-No cloud apply. Do **not** install OpenShift/CRC/k3s locally. Do **not** use `kubectl` as the lab path. If `ansible-playbook` is missing, document syntax-check as residual risk (timed path still requires Terraform validate).
+No cloud apply. Do **not** install a local cluster; use the shared k3s kubeconfig. Do **not** use `kubectl` as the lab path. If `ansible-playbook` is missing, document syntax-check as residual risk (timed path still requires Terraform validate).
 
 ## Do the lab
 

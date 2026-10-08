@@ -5,7 +5,7 @@
 **Setup:** [Participant setup](PARTICIPANT-SETUP-README.md) · [Final env](FINAL-SETUP-README.md) · [Setup instructions](SETUP-INSTRUCTIONS.md)  
 **Which file:** [_PARTICIPANT-FILE-GUIDE.md](_PARTICIPANT-FILE-GUIDE.md)
 
-**Stack for labs:** Java 21 · Spring Boot REST · Angular · **PostgreSQL** · Kafka · OpenShift · GitHub Actions
+**Stack for labs:** Java 21 · Spring Boot REST · Angular · **PostgreSQL** · Kafka · k3s · GitHub Actions
 
 | Week | Folder | Labs |
 | ---- | ------ | ---- |
@@ -64,7 +64,7 @@ Each module name opens the lab guide in this repo.
 | 39 | [Lab 39 — Spring Data JPA and PostgreSQL Integration](Week%204%20-%20Kafka,%20Angular,%20Oracle%20and%20Resilience/module-39/lab39/LAB-39-GUIDE.md) |
 | 40 | [Lab 40 — Application Security Testing](Week%205%20-%20DevOps,%20CI-CD%20and%20OpenShift/module-40/lab40/LAB-40-GUIDE.md) |
 | 41 | [Lab 41 — Containers and Docker Image Fundamentals](Week%205%20-%20DevOps,%20CI-CD%20and%20OpenShift/module-41/lab41/LAB-41-GUIDE.md) |
-| 42 | [Lab 42 — Kubernetes and OpenShift Architecture](Week%205%20-%20DevOps,%20CI-CD%20and%20OpenShift/module-42/lab42/LAB-42-GUIDE.md) |
+| 42 | [Lab 42 — Kubernetes and k3s Architecture](Week%205%20-%20DevOps,%20CI-CD%20and%20OpenShift/module-42/lab42/LAB-42-GUIDE.md) |
 | 43 | [Lab 43 — GitHub Actions and CI/CD Integration](Week%205%20-%20DevOps,%20CI-CD%20and%20OpenShift/module-43/lab43/LAB-43-GUIDE.md) |
 | 44 | [Lab 44 — Continuous Delivery and Deployment Pipelines](Week%205%20-%20DevOps,%20CI-CD%20and%20OpenShift/module-44/lab44/LAB-44-GUIDE.md) |
 | 45 | [Lab 45 — Infrastructure as Code with Ansible and Terraform](Week%205%20-%20DevOps,%20CI-CD%20and%20OpenShift/module-45/lab45/LAB-45-GUIDE.md) |

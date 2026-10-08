@@ -22,4 +22,4 @@ Full course rule: [Which file do I open?](../../_PARTICIPANT-FILE-GUIDE.md) · [
 
 **Critical:** Design the **REST / OpenAPI** Customer contract first (`/api/v1/customers`). Fixtures: `CUS-1001` Amina Khan ACTIVE, `CUS-1002` Ravi Singh PROSPECT, correlation `lab-request-001`. Angular consumes this API later; PostgreSQL and GitHub Actions appear in later modules. Do **not** follow a SOAP/WSDL or Oracle-first path in this course.
 
-**Stack wording for this module:** Angular · REST / OpenAPI · PostgreSQL · OpenShift · GitHub Actions.
+**Stack wording for this module:** Angular · REST / OpenAPI · PostgreSQL · k3s · GitHub Actions.

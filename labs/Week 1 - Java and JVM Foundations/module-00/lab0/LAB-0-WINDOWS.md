@@ -203,7 +203,7 @@ docker version
 | `docker` not found | Reopen the terminal after install; confirm Docker Desktop added itself to Path |
 | Engine pipe / `com.docker.service` Stopped | Start Docker Desktop; if still down, `net start com.docker.service` in an **elevated** PowerShell |
 | Installer blocked | You need local admin — do this step while you still have it. Docker Engine without Desktop is acceptable if `docker version` shows Server |
-| Hypervisor / virtualization error | Enable virtualization in BIOS/UEFI; do not install OpenShift Local / CRC as a substitute |
+| Hypervisor / virtualization error | Enable virtualization in BIOS/UEFI; do not install a local k3s or k3d cluster as a substitute |
 
 Do **not** start Lab 1 until rows 1–8 below are Pass. Complete this step before Week 4.
 

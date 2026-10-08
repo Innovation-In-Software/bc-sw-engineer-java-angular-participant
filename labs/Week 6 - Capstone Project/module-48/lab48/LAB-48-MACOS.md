@@ -4,7 +4,7 @@
 **Primary IDE:** IntelliJ IDEA Community Edition  
 **Optional IDE:** VS Code  
 **Shell:** macOS Terminal (zsh)  
-**Stack hint:** Angular · Spring Boot · PostgreSQL · Kafka · OpenShift · GitHub Actions · Terraform/Ansible  
+**Stack hint:** Angular · Spring Boot · PostgreSQL · Kafka · k3s · GitHub Actions · Terraform/Ansible  
 **Full lab steps:** [LAB-48-GUIDE.md](LAB-48-GUIDE.md)  
 **Other OS:** [Windows guide](LAB-48-WINDOWS.md) · [IDE conventions](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/_IDE-CONVENTIONS.md)
 
@@ -23,7 +23,7 @@
 ```bash
 cd ~/java-bootcamp/examples/lab48-capstone-plan
 ls docs
-grep -R "PostgreSQL\|Angular\|GitHub Actions\|OpenShift\|CAP-12" docs || true
+grep -R "PostgreSQL\|Angular\|GitHub Actions\|k3s\|CAP-12" docs || true
 ```
 
 ## Do the lab

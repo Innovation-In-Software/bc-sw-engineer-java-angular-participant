@@ -493,7 +493,7 @@ _Check **Pass** or **Fail** yourself. Do not write these marks anywhere — noth
 
 ## Fullstack note — Angular frontend job (in scope)
 
-This lab’s primary workflow remains the **Spring Boot / Maven** CRM verify + package-once path. For the **Java & Angular Fullstack** pipeline, also plan (and, when your repo includes `frontend/`, implement) a parallel job so UI regressions fail CI before OpenShift:
+This lab’s primary workflow remains the **Spring Boot / Maven** CRM verify + package-once path. For the **Java & Angular Fullstack** pipeline, also plan (and, when your repo includes `frontend/`, implement) a parallel job so UI regressions fail CI before k3s:
 
 ```yaml
 frontend:

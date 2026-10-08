@@ -22,7 +22,7 @@ Full course rule: [Which file do I open?](../../_PARTICIPANT-FILE-GUIDE.md) · [
 - APIs: **REST** · Spring Boot
 - Persistence: **PostgreSQL** (not Oracle)
 - Messaging context: **Kafka** (conceptual UI updates if not fully wired)
-- Runtime / CI later: **OpenShift** · **GitHub Actions** (Lab 51)
+- Runtime / CI later: **k3s** · **GitHub Actions** (Lab 51)
 
 ## Pre-lab exercises
 

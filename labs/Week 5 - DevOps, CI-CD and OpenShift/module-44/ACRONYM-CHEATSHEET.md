@@ -72,16 +72,16 @@ _Derived from **25** curriculum slide diagram title(s) plus slide text for this 
 
 ---
 
-## Containers & OpenShift
+## Containers & k3s
 
 | Term | Full form | Simple meaning |
 | --- | --- | --- |
-| **Deployment** | — | Object that manages replica Pods and rolling updates (same API on OpenShift). |
+| **Deployment** | — | Object that manages replica Pods and rolling updates (same API on k3s). |
 | **Docker** | — | Tool to package apps as portable container images. |
-| **Kubernetes** | — | Container orchestration API OpenShift builds on (often abbreviated K8s). |
-| **OpenShift** | — | Instructor-hosted cluster (Projects + Routes). Use `oc`, not local k3s. |
-| **Route** | — | OpenShift object that exposes a Service (Lab 42). CD smoke uses the Route hostname. |
-| **oc** | OpenShift CLI | Client for `set image`, `rollout`, and `apply`. |
+| **Kubernetes** | — | Container orchestration API k3s builds on (often abbreviated K8s). |
+| **k3s** | — | Instructor-hosted cluster (namespaces + Traefik Ingress). Use `kubectl`, the shared k3s cluster. |
+| **Route** | — | k3s object that exposes a Service (Lab 42). CD smoke uses the Ingress hostname. |
+| **oc** | k3s CLI | Client for `set image`, `rollout`, and `apply`. |
 
 ---
 

@@ -60,7 +60,7 @@ Any failed smoke check triggers rollback; the release owner calls it, with no de
 
 ## Rollback Command
 
-oc rollout undo on the deployment, then re-run readiness and the CUS-1001 read to confirm the previous revision serves.
+kubectl rollout undo on the deployment, then re-run readiness and the CUS-1001 read to confirm the previous revision serves.
 
 ## Pass Mark
 

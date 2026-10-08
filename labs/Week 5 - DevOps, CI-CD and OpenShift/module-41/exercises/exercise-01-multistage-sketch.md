@@ -30,7 +30,7 @@ Single-stage with full JDK + source — size/security risk?
 | Symptom | Fix |
 | --- | --- |
 | Baking .env into layers | Runtime env only — never passwords in Dockerfile |
-| OpenShift manifests now | Park Lab 42 |
+| k3s manifests now | Park Lab 42 |
 
 **Module 41** · Architecture exercise · [setup + file names](EXERCISES-INDEX.md)
 

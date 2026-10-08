@@ -38,7 +38,7 @@ cd ~/java-bootcamp/examples/lab46-crm
 mvn -B test
 ```
 
-Embedded Kafka ITs — no Docker broker and no OpenShift required for the timed path. Do **not** use `kubectl`/k3s.
+Embedded Kafka ITs — no Docker broker and no k3s required for the timed path. Use `kubectl` on the shared k3s cluster.
 
 ## Do the lab
 

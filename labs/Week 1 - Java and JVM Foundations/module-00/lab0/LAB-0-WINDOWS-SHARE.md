@@ -197,7 +197,7 @@ docker version
 
 **Expected:** Both a **Client** and a **Server** section print. Client-only with `open //./pipe/docker_engine` means the engine is not up — start Docker Desktop and wait.
 
-**If it fails:** reopen the terminal after install; start Docker Desktop; if `com.docker.service` is Stopped, `net start com.docker.service` in an **elevated** PowerShell. You need local admin for the installer. Docker Engine without Desktop is acceptable if `docker version` shows Server. Do not install OpenShift Local / CRC as a substitute.
+**If it fails:** reopen the terminal after install; start Docker Desktop; if `com.docker.service` is Stopped, `net start com.docker.service` in an **elevated** PowerShell. You need local admin for the installer. Docker Engine without Desktop is acceptable if `docker version` shows Server. Do not install a local k3s or k3d cluster as a substitute.
 
 Do **not** start Lab 1 until rows 1–8 below are Pass. Complete this step before Week 4.
 

@@ -96,7 +96,7 @@ After completing this lab, you will be able to:
 
 The team wants faster environment setup for Northstar CRM (dev/test/stage). AI-generated infrastructure can be syntactically plausible while insecure, destructive, expensive, or non-idempotent. Human review remains accountable—especially before anything that could reach a cluster hosting customer APIs.
 
-You are drafting non-production sketches so Lab 44 promotions land on predictable **OpenShift Projects** and hosts. Publicly exposed databases, hard-coded cloud keys, and “AI said apply” are unacceptable.
+You are drafting non-production sketches so Lab 44 promotions land on predictable **k3s namespaces** and hosts. Publicly exposed databases, hard-coded cloud keys, and “AI said apply” are unacceptable.
 
 Use these examples consistently:
 
@@ -105,7 +105,7 @@ Use these examples consistently:
 | `CUS-1001` | Amina Khan | App fixture only—never in `.tf` / Ansible vars as PII |
 | `CUS-1002` | Ravi Singh | App fixture only |
 | `lab-request-001` | — | App correlation only |
-| `crm-dev` / `crm-test` | — | example OpenShift Project names |
+| `crm-dev` / `crm-test` | — | example k3s namespace names |
 | `lab45-001` | — | AI review entry ID in `docs/ai-iac-review.md` |
 
 **Security note for evidence.** Never commit `*.tfstate`, real `terraform.tfvars`, cloud keys, Ansible vault passwords, or kubeconfig. Commit `*.tfvars.example` and `inventory.example.yml` only. Redact plan outputs that show account IDs if instructor requires.
@@ -131,7 +131,7 @@ Prior labs: [Lab 44](../../module-44/lab44/LAB-44-GUIDE.md).
 Confirm (Lab 0 tools assumed):
 
 * Terraform 1.5+ (Ansible optional for timed-path syntax-check)
-* OpenShift / cloud credentials only as the instructor directs — do **not** install CRC/k3s locally
+* k3s / cloud credentials only as the instructor directs — do **not** install a local cluster; use the shared k3s kubeconfig
 * GitHub Copilot (or equivalent) optional for drafts
 * `tflint` / `ansible-lint` if available
 * No secrets committed to Git
@@ -193,7 +193,7 @@ cd lab45-crm
 git switch -c lab/45-crm 2>/dev/null || true
 ```
 
-State environment, region, network expectations, runtime (**OpenShift Project** / VM — not local k3s), database posture (private PostgreSQL), tags, and cost limits. List **forbidden** resources and public exposure. Define outputs and evidence expected from AI (file list, assumptions section, review checklist).
+State environment, region, network expectations, runtime (**k3s namespace** / VM — the shared k3s cluster), database posture (private PostgreSQL), tags, and cost limits. List **forbidden** resources and public exposure. Define outputs and evidence expected from AI (file list, assumptions section, review checklist).
 
 **Expected result:** Written contract with forbidden list and cost/exposure limits.
 
@@ -210,10 +210,10 @@ State environment, region, network expectations, runtime (**OpenShift Project** 
 Example prompt constraints (adapt):
 
 ```text
-Generate Terraform for a non-prod OpenShift Project crm-${environment}
+Generate Terraform for a non-prod k3s namespace crm-${environment}
 with labels application=crm. No public LoadBalancer DB. No plaintext secrets.
 Pin provider versions. List assumptions. Include a human review checklist.
-Do not install OpenShift, CRC, or k3s on the laptop.
+Do not install k3s, CRC, or k3s on the laptop.
 ```
 
 **Expected result:** Draft files present; prompt archived; assumptions listed.
@@ -247,7 +247,7 @@ resource "null_resource" "crm_stack_sketch" {
 }
 ```
 
-When a cloud sandbox is authorized, replace `null_resource` with real modules. Full-path OpenShift sketch (a Project is a Kubernetes Namespace on the shared cluster — not local k3s):
+When a cloud sandbox is authorized, replace `null_resource` with real modules. Full-path k3s sketch (a Project is a Kubernetes Namespace on the shared cluster — the shared k3s cluster):
 
 ```hcl
 terraform {
@@ -565,7 +565,7 @@ ansible-lint infra/ansible/site.yml
 
 | Symptom | Likely cause | Fix |
 | ------- | ------------ | --- |
-| Provider auth failures | No cloud creds in training | `-backend=false`; OpenShift Project sketch only with instructor kubeconfig; never local k3s |
+| Provider auth failures | No cloud creds in training | `-backend=false`; k3s namespace sketch only with instructor kubeconfig; use the shared k3s cluster |
 | `fmt` fails CI style | Unformatted HCL | `terraform fmt -recursive` |
 | Plan wants destroy | Name/state drift | Read carefully; do not apply blindly |
 | Ansible host unreachable | Example inventory only | Syntax-check only; document residual risk |

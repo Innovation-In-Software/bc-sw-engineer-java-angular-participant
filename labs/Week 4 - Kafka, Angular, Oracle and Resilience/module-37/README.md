@@ -20,4 +20,4 @@ Full course rule: [Which file do I open?](../../_PARTICIPANT-FILE-GUIDE.md) · [
 
 **Critical:** **PostgreSQL only** (not Oracle). Create DB/schema/tables, PKs/FKs, constraints, indexes, least-privilege role, ACID notes, JDBC URL shape. Seed `CUS-1001` / `CUS-1002`. Lab project: `examples/lab37-crm/`.
 
-**Stack for this course:** Angular · REST · **PostgreSQL** · Spring Data JPA (Lab 39) · OpenShift · GitHub Actions
+**Stack for this course:** Angular · REST · **PostgreSQL** · Spring Data JPA (Lab 39) · k3s · GitHub Actions

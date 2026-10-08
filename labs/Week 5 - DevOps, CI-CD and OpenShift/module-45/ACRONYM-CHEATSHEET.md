@@ -64,9 +64,9 @@ _Derived from **32** curriculum slide diagram title(s) plus slide text for this 
 | **IAM** | Identity and Access Management | AWS access control; least-privilege IAM policies protect state and resources. |
 | **RBAC** | Role-Based Access Control | General access-control pattern paired with IAM to restrict who can touch state. |
 | **RDS** | Relational Database Service | AWS managed database resource type. |
-| **GKE** | Google Kubernetes Engine | Comparison-only managed Kubernetes (this course uses **OpenShift**). |
-| **OpenShift** | — | Instructor-hosted cluster (Projects + Routes). IaC sketches a Project, not a laptop CRC/k3s install. |
-| **Project** | OpenShift Project | Isolation boundary (a Kubernetes Namespace plus quota/RBAC). Lab 42/44 runtime. |
+| **GKE** | Google Kubernetes Engine | Comparison-only managed Kubernetes (this course uses **k3s**). |
+| **k3s** | — | Instructor-hosted cluster (namespaces + Traefik Ingress). IaC sketches a Project, not a laptop CRC/k3s install. |
+| **Project** | k3s namespace | Isolation boundary (a Kubernetes Namespace plus quota/RBAC). Lab 42/44 runtime. |
 | **GCS** | Google Cloud Storage | Google Cloud's remote-state backend option. |
 | **ARM** | Azure Resource Manager | Azure's native IaC/deployment model, named alongside Terraform/CloudFormation/Pulumi. |
 

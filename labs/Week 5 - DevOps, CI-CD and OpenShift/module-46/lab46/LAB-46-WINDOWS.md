@@ -38,7 +38,7 @@ cd $env:USERPROFILE\java-bootcamp\examples\lab46-crm
 mvn -B test
 ```
 
-Verified on this laptop (2026-08-28), Temurin 21.0.11, Maven 3.9.9: Embedded Kafka ITs — **Tests run: 3** (consume, duplicate ignore, poison key → DLT). No Docker broker and no OpenShift required for the timed path. Do **not** use `kubectl`/k3s.
+Verified on this laptop (2026-08-28), Temurin 21.0.11, Maven 3.9.9: Embedded Kafka ITs — **Tests run: 3** (consume, duplicate ignore, poison key → DLT). No Docker broker and no k3s required for the timed path. Use `kubectl` on the shared k3s cluster.
 
 ## Do the lab
 

@@ -293,7 +293,7 @@ mvn -B test -Dtest=CustomerControllerMockMvcTest
 **Do this:** Write `docs/cors-angular.md`:
 
 * Dev: `@CrossOrigin(origins = "http://localhost:4200")` on controller **or** global `WebMvcConfigurer`
-* Production: prefer API gateway / OpenShift route policy — do not `*` credentials casually
+* Production: prefer API gateway / k3s route policy — do not `*` credentials casually
 * Remind that Angular `HttpClient` sends JSON + optional `X-Correlation-Id`
 
 Optional timed code: add `@CrossOrigin` on the controller class.
@@ -389,7 +389,7 @@ git status
 
 1. Why prefer `ResponseEntity` over always returning the body type?
 2. What breaks in Angular if create returns 200 without `Location`?
-3. Where should CORS be enforced in OpenShift later?
+3. Where should CORS be enforced in k3s later?
 
 ---
 

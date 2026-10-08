@@ -13,7 +13,7 @@ Full course rule: [Which file do I open?](../../_PARTICIPANT-FILE-GUIDE.md) · [
 - End-to-end **GitHub Actions** workflow for the capstone
 - PR quality gates for **Angular** and **Spring Boot**
 - SAST / dependency and container scan evidence
-- Terraform/Ansible stages and **OpenShift** deploy with environments/approvals
+- Terraform/Ansible stages and **k3s** deploy with environments/approvals
 - OIDC/secrets hygiene, smoke tests, and rollback
 
 ## Stack (this course)
@@ -22,7 +22,7 @@ Full course rule: [Which file do I open?](../../_PARTICIPANT-FILE-GUIDE.md) · [
 - APIs: **REST** · Spring Boot
 - Persistence: **PostgreSQL**
 - Messaging: **Kafka**
-- Runtime: **OpenShift** · Docker
+- Runtime: **k3s** · Docker
 - CI/CD: **GitHub Actions** (not Bitbucket)
 - IaC: **Terraform** · **Ansible**
 

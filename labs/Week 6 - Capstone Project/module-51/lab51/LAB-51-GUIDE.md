@@ -1,4 +1,4 @@
-# Lab 51: Capstone Security, CI/CD and Deployment — GitHub Actions to OpenShift
+# Lab 51: Capstone Security, CI/CD and Deployment — GitHub Actions to k3s
 
 **Module:** 51 — Capstone Security, CI/CD and Deployment  
 **Duration:** ~45 minutes (timed path / session block with starter) · Full path: 6–8 Hours
@@ -18,12 +18,12 @@
 | --- | --- |
 | **Time** | ~45 min session block · full path 6–8 h multi-day |
 | **Checkpoint** | **E** (session-block — no separate pre-lab exercises) |
-| **Must prove** | E2E Actions workflow · PR gates · Angular + Java · SAST/scan · OpenShift deploy plan · smoke/rollback |
+| **Must prove** | E2E Actions workflow · PR gates · Angular + Java · SAST/scan · k3s deploy plan · smoke/rollback |
 | **Hard gate** | Lab 48 plans · Lab 50 tree buildable · GitHub repo with Actions enabled |
 
 ### What you will learn
 
-Wire an end-to-end GitHub Actions delivery path with security gates and OpenShift deployment discipline for the capstone.
+Wire an end-to-end GitHub Actions delivery path with security gates and k3s deployment discipline for the capstone.
 
 ### Enterprise context
 
@@ -69,7 +69,7 @@ Labs and exercises are **practice only**. Nothing is submitted or graded. Do not
 | 3 | Java verify + SAST/dependency scan evidence (or residual risk) |
 | 4 | Container build + scan notes; digest identity |
 | 5 | Terraform/Ansible stage notes tied to Lab 48 plan |
-| 6 | OpenShift deploy job/docs with environments/approvals |
+| 6 | k3s deploy job/docs with environments/approvals |
 | 7 | OIDC/secrets hygiene (names only in docs) |
 | 8 | Smoke + rollback runbook section |
 | 9 | `docs/capstone-cicd-runbook.md` |
@@ -80,7 +80,7 @@ Labs and exercises are **practice only**. Nothing is submitted or graded. Do not
 
 ## Lab Overview
 
-This Module 51 lab completes the capstone **security and delivery spine**: GitHub Actions end-to-end workflow, PR quality gates, Angular and Java build/test, SAST, container build/scan, Terraform/Ansible stages, OpenShift deploy with environments/approvals, OIDC/secrets, smoke tests, and rollback.
+This Module 51 lab completes the capstone **security and delivery spine**: GitHub Actions end-to-end workflow, PR quality gates, Angular and Java build/test, SAST, container build/scan, Terraform/Ansible stages, k3s deploy with environments/approvals, OIDC/secrets, smoke tests, and rollback.
 
 ## Learning Objectives
 
@@ -89,12 +89,12 @@ After completing this lab, you will be able to:
 * Design PR vs main vs protected-environment behaviors in Actions
 * Gate fullstack changes with Angular and Maven jobs
 * Integrate SAST/image scan evidence into promotion criteria
-* Describe OIDC/secrets and approval gates for OpenShift
+* Describe OIDC/secrets and approval gates for k3s
 * Document smoke verification and rollback
 
 ## Business Scenario
 
-Leadership freezes: **No production-like OpenShift promote without Actions evidence, digest pinning, environment approval, smoke, and a written rollback.** You own that gate for Northstar CRM built in Labs 49–50.
+Leadership freezes: **No production-like k3s promote without Actions evidence, digest pinning, environment approval, smoke, and a written rollback.** You own that gate for Northstar CRM built in Labs 49–50.
 
 | ID | Name | Notes |
 | -- | ---- | ----- |
@@ -112,7 +112,7 @@ flowchart LR
   PR["Pull request"] --> Gates["Actions: lint/test<br/>Angular + Maven + SAST"]
   Main["main / tag"] --> Build["Build images<br/>scan + digest"]
   Build --> Appr["Environment approval"]
-  Appr --> OS["OpenShift deploy"]
+  Appr --> OS["k3s deploy"]
   OS --> Smoke["Smoke CUS-1001"]
   Smoke -->|fail| RB["Rollback prior digest"]
 ```
@@ -124,7 +124,7 @@ Prior labs: [48](../../module-48/lab48/LAB-48-GUIDE.md) · [49](../../module-49/
 * GitHub repository with Actions enabled
 * Lab 48 CI/CD + env strategy docs
 * Buildable Angular + Spring Boot tree
-* OpenShift Project access or documented deploy substitute
+* k3s namespace access or documented deploy substitute
 
 ### Pre-flight
 
@@ -174,7 +174,7 @@ Project root: `~/java-bootcamp/examples/lab51-capstone` (or your capstone monore
 
 ### Step 2 — Angular build/test job
 
-**Why:** Capstone UI regressions must fail CI before OpenShift.
+**Why:** Capstone UI regressions must fail CI before k3s.
 
 **Do this:** Implement `npm ci` and `npx ng build` (production config). Add headless unit tests when the tree has specs (Lab 50 starter skips Karma). Upload `dist/` artifact on `main` if deploy consumes it (or bake into nginx image in the container job).
 
@@ -196,11 +196,11 @@ Project root: `~/java-bootcamp/examples/lab51-capstone` (or your capstone monore
 
 ---
 
-### Step 4 — Terraform/Ansible stages and OpenShift deploy
+### Step 4 — Terraform/Ansible stages and k3s deploy
 
 **Why:** Click-ops deploys cannot be audited.
 
-**Do this:** Add workflow stages or linked docs that run `terraform plan` (apply only with approval) and Ansible syntax/check as scoped in Lab 48. Deploy to OpenShift using digest, Project from Lab 42 patterns, and GitHub **Environments** with required reviewers for stage/prod-like targets.
+**Do this:** Add workflow stages or linked docs that run `terraform plan` (apply only with approval) and Ansible syntax/check as scoped in Lab 48. Deploy to k3s using digest, Project from Lab 42 patterns, and GitHub **Environments** with required reviewers for stage/prod-like targets.
 
 **Expected result:** Deploy job consumes prior artifacts/digests—does not rebuild silently.
 
@@ -224,7 +224,7 @@ Project root: `~/java-bootcamp/examples/lab51-capstone` (or your capstone monore
 
 **Why:** Deploy without verify leaves Route green and app wrong.
 
-**Do this:** Post-deploy smoke: readiness + `CUS-1001` path through Route. Document rollback to previous digest/`oc rollout undo`. Complete Failure Experiments. Commit your work to your GitHub repo. Do not take screenshots.
+**Do this:** Post-deploy smoke: readiness + `CUS-1001` path through Ingress. Document rollback to previous digest/`kubectl rollout undo`. Complete Failure Experiments. Commit your work to your GitHub repo. Do not take screenshots.
 
 **Expected result:** Peer can rerun CI and describe rollback without Slack.
 
@@ -238,7 +238,7 @@ Project root: `~/java-bootcamp/examples/lab51-capstone` (or your capstone monore
 | - | ------- | ---------- |
 | 1 | PR gates include Angular + Maven | Pass / Fail |
 | 2 | SAST/scan + image digest evidence | Pass / Fail |
-| 3 | OpenShift deploy uses approvals / env secrets | Pass / Fail |
+| 3 | k3s deploy uses approvals / env secrets | Pass / Fail |
 | 4 | Smoke + rollback documented | Pass / Fail |
 | 5 | No secrets in YAML | Pass / Fail |
 
@@ -246,7 +246,7 @@ Project root: `~/java-bootcamp/examples/lab51-capstone` (or your capstone monore
 
 ## Safety Rules
 
-* Authorized OpenShift Projects only.
+* Authorized k3s namespaces only.
 * Never commit cluster credentials, registry passwords, or cloud keys.
 * Package-once / digest promote—no silent rebuilds on deploy.
 * Synthetic smoke data only.

@@ -4,7 +4,7 @@
 **Primary IDE:** IntelliJ IDEA Community Edition  
 **Optional IDE:** VS Code  
 **Shell:** macOS Terminal (zsh)  
-**Stack hint:** Angular · REST · PostgreSQL · Kafka · GitHub Actions · OpenShift `oc` · defense markdown  
+**Stack hint:** Angular · REST · PostgreSQL · Kafka · GitHub Actions · k3s `kubectl` · defense markdown  
 **Full lab steps:** [LAB-52-GUIDE.md](LAB-52-GUIDE.md)  
 **Pre-lab exercises:** [`../exercises/EXERCISES-INDEX.md`](../exercises/EXERCISES-INDEX.md)  
 **Other OS:** [Windows guide](LAB-52-WINDOWS.md) · [IDE conventions](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/_IDE-CONVENTIONS.md)

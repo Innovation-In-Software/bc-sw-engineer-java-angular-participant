@@ -4,7 +4,7 @@
 **Primary IDE:** IntelliJ IDEA Community Edition  
 **Optional IDE:** VS Code · GitHub web UI  
 **Shell:** Windows PowerShell  
-**Stack hint:** GitHub Actions · Angular · Maven · OpenShift `oc` · digest promote  
+**Stack hint:** GitHub Actions · Angular · Maven · k3s `kubectl` · digest promote  
 **Full lab steps:** [LAB-51-GUIDE.md](LAB-51-GUIDE.md)  
 **Other OS:** [macOS guide](LAB-51-MACOS.md) · [IDE conventions](../../../Week%201%20-%20Java%20and%20JVM%20Foundations/_IDE-CONVENTIONS.md)
 
@@ -12,7 +12,7 @@
 
 - Labs 48–50 planning/code available; GitHub repo with Actions enabled (for a live run)
 - Node.js LTS; JDK 21; `gh` optional
-- `npx ng` (CLI need not be global). `oc` is **not** required on the laptop.
+- `npx ng` (CLI need not be global). `kubectl` is **not** required on the laptop.
 
 ## Paths (Windows)
 
@@ -31,11 +31,11 @@ Merge `.github/` into `lab50-capstone` if that monorepo already holds `frontend/
 ### Commands this lab typically uses
 
 ```powershell
-Select-String -Path .github\workflows\*.yml -Pattern 'npx ng build|mvn -B clean verify|oc set image|environment:'
+Select-String -Path .github\workflows\*.yml -Pattern 'npx ng build|mvn -B clean verify|kubectl set image|environment:'
 Select-String -Path .github\workflows\capstone-cd.yml -Pattern 'mvn .*package'
 ```
 
-Verified on this laptop (2026-08-28): **no local OpenShift** (instructor-hosted Project). Timed-path Pass is workflow + runbook lint. Live `oc set image` / Route smoke is homework. Do **not** rebuild with `mvn package` on the CD job. Do **not** substitute k3s/`kubectl`. Bitbucket is comparison-only.
+Verified on this laptop (2026-08-28): **shared k3s** (instructor-hosted Project). Timed-path Pass is workflow + runbook lint. Live `kubectl set image` / Ingress smoke is homework. Do **not** rebuild with `mvn package` on the CD job. Use **k3s** and `kubectl`. Bitbucket is comparison-only.
 
 Optional local mirrors (Lab 50 tree): `npx ng build --configuration=production` in `frontend/`; `mvn -B test` in `backend/` against PostgreSQL.
 

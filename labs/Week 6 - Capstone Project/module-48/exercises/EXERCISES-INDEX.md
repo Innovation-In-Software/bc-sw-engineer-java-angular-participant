@@ -15,9 +15,9 @@
 | Do now | Do not add yet |
 | --- | --- |
 | Outline context and container diagrams | Do not implement CAP-12 in this pre-lab (Lab 49) |
-| Draft measurable NFR placeholders | Do not invent Bitbucket/k3s as the delivery path |
+| Draft measurable NFR placeholders | Do not invent Bitbucket as the delivery path; the cluster is shared k3s |
 | Sketch vertical backlog stories | Do not skip measurable NFRs |
-| List ADR topics including OpenShift + Actions | Do not commit cluster credentials |
+| List ADR topics including k3s + Actions | Do not commit cluster credentials |
 | Prepare docs/ folder checklist | Do not treat React/SOAP/Oracle as the taught stack |
 
 ## Workspace
